@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* Importa as configurações globais, reset e layouts padrão */
+@import url("index.css");
+
+/* Container de eventos */
+.eventos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* espaço entre os cards */
+}
+
+/* Card individual */
+.evento-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.evento-card:hover {
+  transform: scale(1.05); /* efeito de zoom ao passar o mouse */
+}
+
+/* Imagem do card */
+.evento-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Informações do evento */
+.evento-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.evento-info h3 {
+  margin: 10px 0;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.evento-info p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.evento-info a {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.evento-info a:hover {
+  background: #ffcc00;
+  color: #333;
+}
+
+/* Rodapé específico para a seção de eventos */
+.rodape-eventos {
+  background: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #ddd;
+}
+
+.rodape-eventos h3 {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.logos img {
+  max-height: 80px;
+  width: auto;
+  transition: transform 0.3s;
+}
+
+.logos img:hover {
+  transform: scale(1.1);
+}
