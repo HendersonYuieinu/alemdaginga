@@ -45,7 +45,7 @@ body {
    Cabeçalho
    ========================================= */
 header {
-  max-width: var(--max-width-header);
+  max-width: 1024px;
   margin: 0 auto;
   padding: 24px;
   display: flex;
@@ -69,7 +69,7 @@ header {
 .navbar a {
   text-decoration: none;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: bold;
   color: #475569;
   transition: color 0.2s ease;
 }
@@ -82,7 +82,7 @@ header {
    Container Principal
    ========================================= */
 main {
-  max-width: var(--max-width-content);
+  max-width: 1024px;
   margin: 0 auto;
   padding: 80px 24px;
 }
@@ -156,11 +156,11 @@ ul li::marker {
 
 .hero > img,
 .hero-text > img {
-  width: 300px;
+  width: 400px;
   height: 300px;
   object-fit: cover;
   border-radius: 24px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 15px 20px 0px -5px rgba(0, 0, 0, 0.1);
   transform: rotate(-2deg);
   transition: transform 0.5s ease;
   float: right;
@@ -307,7 +307,7 @@ ul li::marker {
 }
 
 #patrocinadores-secao {
-  max-width: var(--max-width-header);
+  max-width: 1024px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
