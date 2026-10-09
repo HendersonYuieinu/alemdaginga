@@ -3,20 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Altere o título para o nome da nova página -->
-  <title>Nome da Nova Página - Além da Ginga</title>
-  
+  <title>Eventos - Além da Ginga</title>
   <link rel="shortcut icon" href="img/logo-ginga.png" type="image/x-icon">
-  
-  <!-- Link para o CSS Padrão -->
-  <link rel="stylesheet" href="template.css">
-  
-  <!-- Font Awesome para os ícones do rodapé -->
+  <link rel="stylesheet" href="static/css/eventos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-  <!-- ================= CABEÇALHO PADRÃO ================= -->
   <header>
     <div class="logo">
       <img src="img/logo-ginga.png" alt="Logo Além da Ginga">
@@ -26,33 +18,64 @@
         <li><a href="index.html">Página inicial</a></li>
         <li><a href="eventos-index.html">Eventos</a></li>
         <li><a href="sobre.html">Sobre</a></li>
-        <!-- Adicione novos links aqui se necessário -->
       </ul>
     </nav>
   </header>
-  
-  <!-- ================= CONTEÚDO PRINCIPAL ================= -->
-  <!-- Toda a parte específica da página deve ficar dentro da tag <main> -->
+
   <main>
-    
-    <section id="introducao">
-      <h1>Título da Nova Página</h1>
-      <p>Este é o texto introdutório da sua nova página. O layout já está preparado com os espaçamentos, cores e fontes corretas.</p>
-    </section>
-    
-    <section id="conteudo-generico">
-      <h2>Subtítulo da Seção</h2>
-      <p>Escreva o conteúdo aqui. Você pode adicionar listas, imagens e novos blocos de acordo com a necessidade da página.</p>
-      <ul>
-        <li>Exemplo de item de lista</li>
-        <li>O marcador já está configurado na cor verde do projeto</li>
-        <li>Você pode adicionar textos em <strong>negrito</strong> também.</li>
-      </ul>
+    <!-- Título de Eventos -->
+    <section id="eventos-intro">
+      <h1>Nossos Eventos</h1>
+      <p>Aqui você pode ver todos os nossos eventos, que já ocorreram e que irão ocorrer. Fique sempre por dentro das novidades.</p>
     </section>
 
+    <!-- Lista de Eventos -->
+    <section id="eventos-lista">
+      <div class="eventos-container">
+        
+        <!-- Card de evento 1 -->
+        <div class="evento-card">
+          <img src="img/Copaquilombo.jpeg" alt="Imagem da Copa Quilombo">
+          <div class="evento-info">
+            <h3>Copa Quilombo</h3>
+            <p>📅 29 de novembro | 📍 Castanhal - PA<br><br>
+            A Copa Quilombo chega para celebrar a força, a história e a resistência da nossa capoeira amazônica! Um evento aberto a TODOS os grupos, com categorias de base e adulto, muitos prêmios e, acima de tudo, a valorização de quem faz a nossa arte pulsar.</p>
+            <div class="evento-acoes">
+              <a href="https://www.instagram.com/p/Dc4syGhFh2-/?igsi=OXUxN3NuNmkyNG1s" target="_blank">Saiba mais</a>
+              <a href="https://docs.google.com/forms/d/1gUNEoCvn21JT8FTIdyfeB-2ILQYALZ2hnYDLTrHfJCM/edit" target="_blank">Formulário de Inscrição</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card de evento 2 -->
+        <div class="evento-card">
+          <img src="img/Encontro dos mestres.jpeg" alt="Imagem do Encontro dos Mestres">
+          <div class="evento-info">
+            <h3>Encontro dos Mestres</h3>
+            <p>Ancestralidade, tradição e união através da capoeira. 22 de Agosto as 15h - Quinta do Bosque.</p>
+            <div class="evento-acoes">
+              <a href="https://www.instagram.com/p/DbwR_xqke-B/?igsi=MzRoYmtuYm00Z3Bu" target="_blank">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card de evento 3 -->
+        <div class="evento-card">
+          <img src="img/junhão.jpeg" alt="Imagem da Oficina com Mestre Junhão">
+          <div class="evento-info">
+            <h3>Oficina com mestre Junhão</h3>
+            <p>No dia 11 de abril, às 15h, a energia da capoeira vai tomar conta da Universidade Federal do Pará (UFPA), no Setor de Esportes do Campus de Castanhal PA.</p>
+            <div class="evento-acoes">
+              <a href="https://www.instagram.com/p/DV_m0OOEWii/?igsi=MWd1aXJlZjR3YWtzaw%3D%3D" target="_blank">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
-  <!-- ================= RODAPÉ PADRÃO ================= -->
+  <!-- Rodapé (Site Footer idêntico ao sobre.html) -->
   <footer class="site-footer">
     <section id="patrocinadores-secao">
       
@@ -90,5 +113,6 @@
 
     </section>
   </footer>
+
 </body>
 </html>
