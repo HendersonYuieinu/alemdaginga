@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,7 +8,7 @@
   <title>Além da Ginga</title>
   <link rel="shortcut icon" href="img/logo-ginga.png" type="image/x-icon">
   <!-- Link para o novo CSS -->
-  <link rel="stylesheet" href="static/css/sobre.css">
+  <link rel="stylesheet" href={% static "css/sobre.css" %}>
   <!-- Font Awesome para os ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -14,13 +16,14 @@
 <body>
   <header>
     <div class="logo">
-      <img src="img/logo-ginga.png" alt="Logo Além da Ginga">
+      <img src={% static "img/logo-ginga.png" %} alt="Logo Além da Ginga">
+      <h1>ALEM DA GINGA</h1>
     </div>
     <nav class="navbar">
       <ul>
-        <li><a href="index.html">Página inicial</a></li>
-        <li><a href="eventos-index.html">Eventos</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href={% url 'blog:home' %}>Página inicial</a></li>
+        <li><a href={% url 'blog:eventos' %}>Eventos</a></li>
+        <li><a href={% url 'blog:sobre' %}>Sobre</a></li>
       </ul>
     </nav>
   </header>
@@ -31,7 +34,7 @@
       <div class="hero">
         <div class="hero-text">
           <h1>Além da Ginga</h1>
-          <img src="img/Foto-capa.jpeg" alt="Foto de destaque">
+          <img src={% static "img/Foto-capa.jpeg" %} alt="Foto de destaque">
           <p id="maintext">O Além da Ginga, vem trabalhar a capoeira a mais que o jogo da capoeira, também no ensino histórico, cultural, humanístico, musicalidade, pedagógico, motivacional, científico, esportivo, lazer e social. As aulas são no Setor de Esportes da UFPA (Castanhal) e turma kids no Quinta do Bosque, e como oficinas e cursos em escolas, escolas do campo, quilombos e CRAS. Além de apoio a vários grupos.</p>
         </div>
       </div>
@@ -53,10 +56,10 @@
 
       <!-- Galeria de Imagens (Agora flui com o texto) -->
       <div class="imagens-laterais">
-        <img src="img/drop1.jpeg" alt="Evento 1">
-        <img src="img/drop2.jpeg" alt="Evento 2">
-        <img src="img/drop3.jpeg" alt="Evento 3">
-        <img src="img/drop4.jpeg" alt="Evento 4">
+        <img src={% static "img/drop1.jpeg" %} alt="Evento 1">
+        <img src={% static "img/drop2.jpeg" %} alt="Evento 2">
+        <img src={% static "img/drop3.jpeg" %} alt="Evento 3">
+        <img src={% static "img/drop4.jpeg" %} alt="Evento 4">
       </div>
     </section>
 
@@ -77,11 +80,11 @@
       
       <div class="carousel-eventos">
         <div class="carousel-track">
-          <img src="img/figura 1.jpeg" alt="Primeiro Batizado">
-          <img src="img/figura 2.jpeg" alt="Oficina UFPA">
-          <img src="img/figura 3.jpeg" alt="Segundo Batizado">
-          <img src="img/figura 4.jpeg" alt="Evento UFPA">
-          <img src="img/figura 5.jpeg" alt="Evento 5">
+          <img src={% static "img/figura 1.jpeg" %} alt="Primeiro Batizado">
+          <img src={% static "img/figura 2.jpeg" %} alt="Oficina UFPA">
+          <img src={% static "img/figura 3.jpeg" %} alt="Segundo Batizado">
+          <img src={% static "img/figura 4.jpeg" %} alt="Evento UFPA">
+          <img src={% static "img/figura 5.jpeg" %} alt="Evento 5">
         </div>
       </div>
     </section>
@@ -177,10 +180,10 @@
       <div class="footer-sponsors-wrappeqqqqqr">
         <h2>Patrocinadores e Apoiadores</h2>
         <div class="patrocinadores">
-          <img src="img/patrocinador-1.jpeg" alt="Patrocinador 1" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
-          <img src="img/patrocinador-2.jpeg" alt="Patrocinador 2" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
-          <img src="img/patrocinador-3.jpeg" alt="Patrocinador 3" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
-          <img src="img/patrocinador-4.jpeg" alt="Patrocinador 4" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+          <img src={% static "img/patrocinador-1.jpeg" %} alt="Patrocinador 1" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+          <img src={% static "img/patrocinador-2.jpeg" %} alt="Patrocinador 2" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+          <img src={% static "img/patrocinador-3.jpeg" %} alt="Patrocinador 3" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+          <img src={% static "img/patrocinador-4.jpeg" %} alt="Patrocinador 4" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
         </div>
       </div>
 
@@ -192,6 +195,6 @@
     <img id="lightbox-img" src="" alt="Foto ampliada">
   </div>
 
-  <script src="js/carousel.js"></script>
+  <script src={% static "js/carousel.js" %}></script>
 </body>
 </html>

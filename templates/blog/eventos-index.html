@@ -1,23 +1,25 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eventos - Além da Ginga</title>
-  <link rel="shortcut icon" href="img/logo-ginga.png" type="image/x-icon">
-  <link rel="stylesheet" href="static/css/eventos.css">
+  <link rel="shortcut icon" href={% static "img/logo-ginga.png" %} type="image/x-icon">
+  <link rel="stylesheet" href={% static "css/eventos.css" %}>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="img/logo-ginga.png" alt="Logo Além da Ginga">
+      <img src={% static 'img/logo-ginga.png' %} alt="Logo Além da Ginga">
+      <h1>ALEM DA GINGA</h1>
     </div>
     <nav class="navbar">
       <ul>
-        <li><a href="index.html">Página inicial</a></li>
-        <li><a href="eventos-index.html">Eventos</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href={% url 'blog:home' %}>Página inicial</a></li>
+        <li><a href={% url 'blog:eventos' %}>Eventos</a></li>
+        <li><a href={% url 'blog:sobre' %}>Sobre</a></li>
       </ul>
     </nav>
   </header>
@@ -35,7 +37,7 @@
         
         <!-- Card de evento 1 -->
         <div class="evento-card">
-          <img src="img/Copaquilombo.jpeg" alt="Imagem da Copa Quilombo">
+          <img src={% static "img/Copaquilombo.jpeg" %} alt="Imagem da Copa Quilombo">
           <div class="evento-info">
             <h3>Copa Quilombo</h3>
             <p>📅 29 de novembro | 📍 Castanhal - PA<br><br>
@@ -49,7 +51,7 @@
 
         <!-- Card de evento 2 -->
         <div class="evento-card">
-          <img src="img/Encontro dos mestres.jpeg" alt="Imagem do Encontro dos Mestres">
+          <img src={% static "img/Encontro dos mestres.jpeg" %} alt="Imagem do Encontro dos Mestres">
           <div class="evento-info">
             <h3>Encontro dos Mestres</h3>
             <p>Ancestralidade, tradição e união através da capoeira. 22 de Agosto as 15h - Quinta do Bosque.</p>
@@ -61,7 +63,7 @@
 
         <!-- Card de evento 3 -->
         <div class="evento-card">
-          <img src="img/junhão.jpeg" alt="Imagem da Oficina com Mestre Junhão">
+          <img src={% static "img/junhão.jpeg" %} alt="Imagem da Oficina com Mestre Junhão">
           <div class="evento-info">
             <h3>Oficina com mestre Junhão</h3>
             <p>No dia 11 de abril, às 15h, a energia da capoeira vai tomar conta da Universidade Federal do Pará (UFPA), no Setor de Esportes do Campus de Castanhal PA.</p>
@@ -104,10 +106,10 @@
       <div class="footer-sponsors-wrapper">
         <h2>Patrocinadores e Apoiadores</h2>
         <div class="patrocinadores">
-          <img src="img/patrocinador-1.jpeg" alt="Patrocinador 1" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
-          <img src="img/patrocinador-2.jpeg" alt="Patrocinador 2" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
-          <img src="img/patrocinador-3.jpeg" alt="Patrocinador 3" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
-          <img src="img/patrocinador-4.jpeg" alt="Patrocinador 4" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+          <img src={% static "img/patrocinador-1.jpeg" %} alt="Patrocinador 1" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+          <img src={% static "img/patrocinador-2.jpeg" %} alt="Patrocinador 2" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+          <img src={% static "img/patrocinador-3.jpeg" %} alt="Patrocinador 3" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+          <img src={% static "img/patrocinador-4.jpeg" %} alt="Patrocinador 4" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
         </div>
       </div>
 

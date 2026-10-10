@@ -1,4 +1,7 @@
+{% load static %}
 <!DOCTYPE html>
+
+
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -6,10 +9,10 @@
   <!-- Altere o título para o nome da nova página -->
   <title>Nome da Nova Página - Além da Ginga</title>
   
-  <link rel="shortcut icon" href="img/logo-ginga.png" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static 'img/logo-ginga.png' %}" type="image/x-icon">
   
   <!-- Link para o CSS Padrão -->
-  <link rel="stylesheet" href="static\css\index.css">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
   
   <!-- Font Awesome para os ícones do rodapé -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,13 +22,15 @@
   <!-- ================= CABEÇALHO PADRÃO ================= -->
   <header>
     <div class="logo">
-      <img src="img/logo-ginga.png" alt="Logo Além da Ginga">
+      <img src={% static 'img/logo-ginga.png' %} alt="Logo Além da Ginga">
+      <h1>ALEM DA GINGA</h1>
     </div>
     <nav class="navbar">
       <ul>
-        <li><a href="index.html">Página inicial</a></li>
-        <li><a href="eventos-index.html">Eventos</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
+        
+        <li><a href={% url 'blog:home' %}>Página inicial</a></li>
+        <li><a href={% url 'blog:eventos' %}>Eventos</a></li>
+        <li><a href={% url 'blog:sobre' %}>Sobre</a></li>
         <!-- Adicione novos links aqui se necessário -->
       </ul>
     </nav>
@@ -132,10 +137,10 @@
       <div class="footer-sponsors-wrapper">
         <h2>Patrocinadores e Apoiadores</h2>
         <div class="patrocinadores">
-          <img src="img/patrocinador-1.jpeg" alt="Patrocinador 1" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
-          <img src="img/patrocinador-2.jpeg" alt="Patrocinador 2" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
-          <img src="img/patrocinador-3.jpeg" alt="Patrocinador 3" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
-          <img src="img/patrocinador-4.jpeg" alt="Patrocinador 4" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+           <img src="{% static 'img/patrocinador-1.jpeg' %}" alt="Patrocinador 1">
+          <img src="{% static 'img/patrocinador-2.jpeg' %}" alt="Patrocinador 2">
+          <img src="{% static 'img/patrocinador-3.jpeg' %}" alt="Patrocinador 3">
+          <img src="{% static 'img/patrocinador-4.jpeg' %}" alt="Patrocinador 4">
         </div>
       </div>
 
