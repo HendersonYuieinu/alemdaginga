@@ -54,16 +54,28 @@ header {
   border-bottom: 1px solid rgba(226, 232, 240, 0.6);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  align-self: normal;
+  gap: 8px;
+}
+
 .logo img {
   height: 8rem;
   object-fit: contain;
   border-radius: 8px;
 }
 
+header h1 {
+  margin: 0;
+  display: inline-block;
+}
+
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 24px;
+  gap: 16px;
 }
 
 .navbar a {
@@ -114,13 +126,14 @@ p {
 }
 
 ul {
-  padding-left: 24px;
+  padding-left: 16px;
   margin-bottom: 32px;
 }
 
 ul li {
   margin-bottom: 8px;
   color: var(--color-text-muted);
+  width: max-content;
 }
 /* =========================================
    Sessão de Eventos (Cards)
@@ -292,7 +305,7 @@ ul li {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 782px) {
   header {
     flex-direction: column;
     gap: 16px;
