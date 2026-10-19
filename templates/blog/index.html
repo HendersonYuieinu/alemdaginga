@@ -22,15 +22,15 @@
   <!-- ================= CABEÇALHO PADRÃO ================= -->
   <header>
     <div class="logo">
-      <img src={% static 'img/logo-ginga.png' %} alt="Logo Além da Ginga">
+      <img src="{% static 'img/logo-ginga.png' %}" alt="Logo Além da Ginga">
       <h1>ALEM DA GINGA</h1>
     </div>
     <nav class="navbar">
       <ul>
         
-        <li><a href={% url 'blog:home' %}>Página inicial</a></li>
-        <li><a href={% url 'blog:eventos' %}>Eventos</a></li>
-        <li><a href={% url 'blog:sobre' %}>Sobre</a></li>
+        <li><a href="{% url 'blog:home' %}">Página inicial</a></li>
+        <li><a href="{% url 'blog:eventos' %}">Eventos</a></li>
+        <li><a href="{% url 'blog:sobre' %}">Sobre</a></li>
         <!-- Adicione novos links aqui se necessário -->
       </ul>
     </nav>
@@ -42,39 +42,16 @@
     
     <!-- Coluna Esquerda: Lista de Artigos / Conteúdo -->
     <div class="posts-column">
-      
+      {% for post in postagens %}
+
       <!-- Item 1 -->
       <article class="post-item">
-        <h2>Título do seu primeiro artigo ou seção aqui</h2>
-        <p class="post-excerpt">Este é um espaço reservado para a descrição ou resumo do seu texto. O layout reproduz o estilo de lista de postagens que você enviou como referência. Você pode escrever vários parágrafos curtos.</p>
-        <a href="#" class="read-more">Leia mais...</a>
+        <h2>{{ post.titulo }}</h2>
+        <p class="post-excerpt">{{post.resumo}}</p>
+        <a href="{% url 'blog:post_completo' post.slug %}" class="read-more">Leia mais...</a>
       </article>
 
-      <!-- Item 2 -->
-      <article class="post-item">
-        <h2>Guia Interativo de Capoeira e Movimentos</h2>
-        <p class="post-excerpt">Substitua este texto com a introdução do seu conteúdo. O espaçamento, as cores e a tipografia já estão alinhados com o padrão do projeto.</p>
-        <a href="#" class="read-more">Leia mais...</a>
-      </article>
-
-      <!-- Item 3 -->
-      <article class="post-item">
-        <h2>Eventos e Roda de Capoeira da Semana</h2>
-        <p class="post-excerpt">Preencha com as informações relevantes. Você pode duplicar este bloco de "article" quantas vezes quiser para adicionar mais itens à sua lista.</p>
-        <a href="#" class="read-more">Leia mais...</a>
-      </article>
-
-      <!-- Seção de Newsletter / Contato estilo a imagem -->
-      <!-- <section class="newsletter-section">
-        <h2>Uma newsletter que traz muito gingado</h2>
-        <p>Insira seu e-mail abaixo para receber conteúdos, novidades sobre eventos e artigos exclusivos diretamente na sua caixa de entrada. Não enviamos spam!</p>
-        <form class="newsletter-form">
-          <input type="text" placeholder="Seu Nome">
-          <input type="email" placeholder="Seu E-mail">
-          <button type="submit">Inscrever-se</button>
-        </form>
-      </section> -->
-
+      {% endfor %}
     </div>
 
     <!-- Coluna Direita: Barra Lateral (Sidebar) -->

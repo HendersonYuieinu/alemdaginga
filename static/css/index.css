@@ -102,7 +102,7 @@ ul li::marker {
    Layout e Estrutura Principal
    ========================================= */
 main {
-  max-width: var(--max-width-content);
+  max-width: 1024;
   margin: 0 auto;
   padding: 80px 24px;
 }
