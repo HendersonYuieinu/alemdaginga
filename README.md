@@ -1,126 +1,65 @@
-# Além da Ginga 🪘
+# 🪘 Além da Ginga
 
-Uma aplicação web desenvolvida em Python para gestão e geração de páginas estáticas/dinâmicas para o projeto **Além da Ginga**. O sistema conta com um painel de administração para edição de conteúdo e um serviço dedicado para geração de ficheiros HTML.
+> Plataforma web full-stack desenvolvida para a gestão, divulgação e integração da comunidade de capoeira, unindo tradição cultural e inovação tecnológica.
 
-## 🗂️ Estrutura do Projeto
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-5.0+-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
+[![Cloudinary](https://img.shields.io/badge/Cloudinary-Media-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)](https://cloudinary.com/)
+[![Render](https://img.shields.io/badge/Render-Backend-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://render.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-Frontend-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-```
-alemdaginga/
-├── app/
-│   ├── routes/
-│   │   └── posts.py          # Rotas para gestão de posts/publicações
-│   ├── services/
-│   │   └── geradorHTML.py    # Serviço responsável pela compilação/geração do HTML
-│   └── main.py               # Ponto de entrada da aplicação backend
-├── public/
-│   ├── css/
-│   │   ├── eventos.css       # Estilos específicos da página de eventos
-│   │   ├── index.css         # Estilos da página principal
-│   │   ├── sobre.css         # Estilos da página "Sobre"
-│   │   └── template.css      # Estilos base para os templates
-│   ├── img/                  # Recursos de imagem do site
-│   ├── js/
-│   │   └── carousel.js       # Script do carrossel/slider interativo
-│   └── posts/
-│       ├── eventos-index.html # Página final de listagem de eventos
-│       ├── index.html        # Página principal pública
-│       └── sobre.html        # Página institucional "Sobre"
-├── templates/
-│   ├── admin/
-│   │   ├── editor.html       # Interface visual do editor de conteúdo
-│   │   └── login.html        # Página de autenticação do administrador
-│   └── template.html         # Modelo base HTML para renderização
-├── .env                      # Variáveis de ambiente
-└── README.md                 # Documentação do projeto
+---
 
-```
+## 📋 Sobre o Projeto
 
-## 🚀 Funcionalidades
+O **Além da Ginga** é um sistema web projetado para otimizar a organização de grupos de capoeira, gerenciamento de eventos (como o *Arena Além da Ginga*), publicação de conteúdos multimídia e engajamento da comunidade acadêmica e cultural. 
 
-* **Painel Administrativo (`/templates/admin`)**:
+O projeto aplica boas práticas de engenharia de software, separação de responsabilidades (MVC/MVT do Django) e integração com serviços em nuvem modernos para persistência de dados, armazenamento de mídias e alta disponibilidade.
 
-  * Autenticação de utilizadores (`login.html`).
+---
 
-  * Editor visual para criação e modificação de publicações (`editor.html`).
+## ✨ Funcionalidades Principais
 
-* **Gerador de HTML (`app/services/geradorHTML.py`)**:
+- **Gestão de Eventos & Inscrições:** Módulo dedicado para divulgação e controle de inscrições em eventos de capoeira, rodas e oficinas (incluindo suporte a materiais promocionais e QR codes).
+- **Galeria Multimídia Otimizada:** Upload e gerenciamento dinâmico de fotos e vídeos dos treinos e apresentações via Cloudinary.
+- **Painel Administrativo:** Interface customizada do Django Admin para controle seguro de usuários, permissões e conteúdos.
+- **Design Responsivo:** Interface limpa e adaptada para dispositivos móveis e desktops utilizando HTML5, CSS3 (Flexbox/Grid) e JavaScript.
 
-  * Transforma os dados ou publicações criadas em páginas HTML estáticas e otimizadas na pasta `public/`.
-
-* **Interface Pública (`/public`)**:
-
-  * Exibição da página inicial, eventos e secção institucional "Sobre".
-
-  * Carrossel dinâmico em JavaScript (`carousel.js`).
-
-  * Estilização modular com ficheiros CSS dedicados.
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Backend**: Python (Framework web como FastAPI, Flask ou similar)
+### **Backend & Core**
+- **Python 3.11+**
+- **Django Framework** (Django ORM, Authentication, Migrations)
+- **Gunicorn** (Servidor WSGI para produção)
 
-* **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+### **Banco de Dados & Armazenamento**
+- **PostgreSQL** (Hospedado no [Supabase](https://supabase.com/))
+- **Cloudinary** (Armazenamento e otimização de mídias em nuvem)
 
-* **Modelagem**: Jinja2 / HTML Templates
+### **Frontend**
+- **HTML5 & CSS3** (Com variáveis customizadas, Flexbox e Grid)
+- **JavaScript (ES6+)**
+- **Font Awesome** (Ícones)
 
-* **Configuração**: Variables de ambiente (`.env`)
+### **Deploy & Infraestrutura**
+- **Render** (Hospedagem do Backend/Aplicação Django)
+- **Vercel / UFPA Server** (Hospedagem de recursos estáticos e frontend)
+- **Git & GitHub** (Controle de versão)
 
-## ⚙️ Configuração e Instalação
+---
 
-### Pré-requisitos
+## 📂 Arquitetura do Projeto
 
-* **Python 3.8+** instalado.
-
-### 1. Clonar o repositório
-
-```
-git clone https://github.com/teu-usuario/alemdaginga.git
-cd alemdaginga
-
-```
-
-### 2. Criar e ativar um ambiente virtual
-
-```
-# No Linux/macOS:
-python3 -m venv venv
-source venv/bin/activate
-
-# No Windows:
-python -m venv venv
-venv\Scripts\activate
-
-```
-
-### 3. Instalar as dependências
-
-```
-pip install -r requirements.txt
-
-```
-
-*(Nota: Certifica-te de criar o ficheiro `requirements.txt` com as tuas bibliotecas Python).*
-
-### 4. Configurar as variáveis de ambiente
-
-Cria/edita o ficheiro `.env` na raiz do projeto seguindo este modelo:
-
-```
-PORT=8000
-SECRET_KEY=sua_chave_secreta_aqui
-DEBUG=True
-
-```
-
-### 5. Executar a aplicação
-
-```
-python app/main.py
-
-```
-
-Acede à aplicação através do teu navegador em: `http://localhost:8000`
-
-## 📝 Licença
-
-Este projeto está sob a licença [MIT](LICENSE).
+```text
+alemdaginga/
+├── core/                  # App principal do Django (Views, Models, Forms)
+├── alemdaginga/           # Configurações do projeto Django (settings, urls, wsgi)
+├── static/                # Arquivos estáticos (CSS, JavaScript, imagens locais)
+├── templates/             # Templates HTML responsivos
+├── media/                 # Gerenciamento temporário / integração Cloudinary
+├── requirements.txt       # Dependências do projeto Python
+├── manage.py              # CLI do Django
+└── README.md              # Documentação do projeto
