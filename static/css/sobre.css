@@ -39,6 +39,7 @@ body {
   line-height: 1.7;
   font-size: 1.125rem;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* =========================================
@@ -65,6 +66,7 @@ header {
   height: 8rem;
   object-fit: contain;
   border-radius: 8px;
+  max-width: 100%;
 }
 
 header h1 {
@@ -76,6 +78,7 @@ header h1 {
   list-style: none;
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .navbar a {
@@ -128,7 +131,7 @@ h3 {
 }
 
 p {
-  color: var(--color-text-muted);
+  /* color: var(--color-text-muted); */
   margin-bottom: 20px;
   text-align: justify;
 }
@@ -146,7 +149,7 @@ ul {
 ul li {
   margin-bottom: 8px;
   color: var(--color-text-muted);
-  width: max-content;
+  max-width: 100%;
 }
 
 ul li::marker {
@@ -169,7 +172,8 @@ ul li::marker {
 
 .hero > img,
 .hero-text > img {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 300px;
   object-fit: cover;
   border-radius: 24px;
@@ -248,8 +252,9 @@ ul li::marker {
 }
 
 .carousel-track img {
-  width: 320px;
-  height: 240px;
+  width: 280px;
+  max-width: 80vw;
+  height: 220px;
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -398,27 +403,9 @@ ul li::marker {
   font-size: 0.875rem;
   color: #cbd5e1;
 }
-
 /* =========================================
-   Responsividade
+   Lightbox
    ========================================= */
-@media (max-width: 716px) {
-
-  
-  h1 { font-size: 2.5rem; }
-  
-  .hero > img,
-  .hero-text > img {
-    float: none;
-    margin: 0 auto 32px auto;
-    display: block;
-  }
-  
-  #patrocinadores-secao {
-    grid-template-columns: 1fr;
-  }
-}
-
 .lightbox {
   display: none;
   position: fixed;
@@ -430,8 +417,9 @@ ul li::marker {
   z-index: 9999;
   justify-content: center;
   align-items: center;
-  margin: auto ;
+  margin: auto;
 }
+
 .lightbox img {
   border-radius: 10px;
   max-width: 90%;
@@ -439,6 +427,53 @@ ul li::marker {
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
 }
 
+/* =========================================
+   Responsividade (Telas Menores)
+   ========================================= */
+@media (max-width: 716px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 { 
+    font-size: 2.5rem; 
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  main {
+    width: 100%;
+    padding: 40px 16px;
+  }
+
+  .hero > img,
+  .hero-text > img {
+    float: none;
+    margin: 0 auto 32px auto;
+    display: block;
+    transform: none;
+  }
+
+  .imagens-laterais {
+    grid-template-columns: 1fr; /* Transforma as fotos do histórico em 1 coluna no celular */
+    padding: 16px;
+  }
+
+  .patrocinadores {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #patrocinadores-secao {
+    grid-template-columns: 1fr; /* Rodapé empilhado no celular */
+    gap: 32px;
+  }
+}
 
 @media (max-width: 782px) {
   header {

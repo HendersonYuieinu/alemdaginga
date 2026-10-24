@@ -120,7 +120,6 @@ h3 {
 }
 
 p {
-  color: var(--color-text-muted);
   margin-bottom: 20px;
   text-align: justify;
 }
@@ -308,7 +307,6 @@ ul li {
 @media (max-width: 782px) {
   header {
     flex-direction: column;
-    gap: 16px;
   }
   
   .eventos-container {
