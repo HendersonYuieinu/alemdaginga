@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load markdown_extras %}
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -35,6 +36,23 @@
     <section id="eventos-lista">
       <div class="eventos-container">
         
+      {% for evento in eventos %}
+        <div class="evento-card">
+          {% if evento.capa %}
+          <img src={{ evento.capa.url }} alt="Imagem da Copa Quilombo">
+          {% endif %}
+
+          <div class="evento-info">
+            <h3>{{evento.titulo}}</h3>
+            {{ evento.resumo |markdown }}
+            <div class="evento-acoes">
+              <a href="{% url 'blog:evento_detalhe' evento.slug %}">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p class="no-events">Nenhum evento cadastrado no momento</p>
+      {% endfor %}
         <!-- Card de evento 1 -->
         <div class="evento-card">
           <img src={% static "img/Copaquilombo.jpeg" %} alt="Imagem da Copa Quilombo">

@@ -306,6 +306,7 @@ ul li {
 
 @media (max-width: 782px) {
   header {
+    gap: 16px;
     flex-direction: column;
   }
   

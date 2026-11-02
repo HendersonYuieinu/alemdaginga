@@ -132,7 +132,7 @@ MAILERS = {
     },
 }
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/AlemdaGinga/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 STORAGES = {
