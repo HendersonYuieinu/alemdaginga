@@ -1,0 +1,513 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+:root {
+  --color-bg: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-text-main: #1e293b; 
+  --color-text-muted: #334155; 
+  --color-brand-light: #dcfce7;
+  --color-brand: #16a34a;
+  --color-brand-hover: #15803d;
+  --color-footer-bg: #0f172a; 
+  --max-width-content: 860px;
+  --max-width-header: 860px;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Reset e Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: var(--color-brand-light);
+  color: #14532d;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.7;
+  font-size: 1.125rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   Cabeçalho (INTACTO)
+   ========================================= */
+header {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  align-self: normal;
+  gap: 8px;
+}
+
+.logo img {
+  height: 8rem;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+header h1 {
+  margin: 0;
+  display: inline-block;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #475569;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: var(--color-brand);
+}
+
+/* =========================================
+   Container Principal
+   ========================================= */
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* =========================================
+   Filtros
+   ========================================= */
+.filtros {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filtros button {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid #cbd5e1;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filtros button.ativo {
+  background: var(--color-footer-bg);
+  color: #ffffff;
+  border-color: var(--color-footer-bg);
+}
+
+.filtros button:hover:not(.ativo) {
+  background: #f1f5f9;
+}
+
+/* =========================================
+   Listagem de Integrantes
+   ========================================= */
+.integrantes-categoria {
+  margin-bottom: 48px;
+}
+
+.integrantes-categoria h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.integrantes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* =========================================
+   Cards de Integrantes
+   ========================================= */
+.integrante-card {
+  background: var(--color-surface);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  padding: 32px 24px 24px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.integrante-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.foto-circular {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+/* Borda verde para mestres */
+.mestre-borda {
+  border: 4px solid var(--color-brand);
+  padding: 2px;
+}
+
+.integrante-info h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 4px;
+}
+
+.integrante-info .graduacao {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.integrante-info p {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.integrante-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.integrante-sociais a {
+  color: var(--color-brand);
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.integrante-sociais a:hover {
+  color: var(--color-brand-hover);
+}
+
+/* =========================================
+   Banner "Mais Integrantes"
+   ========================================= */
+.mais-integrantes {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 56px;
+  border: 1px solid #e2e8f0;
+}
+
+.mais-integrantes strong {
+  color: var(--color-text-main);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.mais-integrantes p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.btn-ver-todos {
+  background: #cbd5e1;
+  color: #334155;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-ver-todos:hover {
+  background: #94a3b8;
+}
+
+/* =========================================
+   Rodapé & Redes Sociais (INTACTO)
+   ========================================= */
+.site-footer {
+  background-color: var(--color-footer-bg);
+  color: #cbd5e1;
+  padding: 64px 24px;
+  border-top: 1px solid #1e293b;
+  margin-top: 40px;
+}
+
+#patrocinadores-secao {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.site-footer h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.patrocinadores {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.patrocinadores img {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  height: 96px;
+  width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.patrocinadores img:hover {
+  transform: scale(1.05);
+}
+
+.footer-social-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.footer-social-icons a {
+  width: 48px;
+  height: 48px;
+  background-color: #1e293b;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+  background-color: var(--color-brand);
+  transform: translateY(-4px);
+}
+
+.footer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-tags span {
+  background-color: #1e293b;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: #cbd5e1;
+}
+
+/* =========================================
+   Responsividade
+   ========================================= */
+@media (max-width: 716px) {
+  #patrocinadores-secao {
+    grid-template-columns: 1fr;
+  }
+  .mais-integrantes {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .mais-integrantes p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 782px) {
+  header {
+    gap: 16px;
+    flex-direction: column;
+  }
+  .filtros {
+    justify-content: center;
+  }
+  .integrantes-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   Modificações para Cards Clicáveis
+   ========================================= */
+.integrante-card {
+  cursor: pointer; /* Transforma a setinha num "dedo" indicando que é clicável */
+  position: relative;
+}
+
+.integrante-card::after {
+  content: "Ver biografia";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--color-brand);
+  color: white;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.integrante-card:hover::after {
+  opacity: 1; /* Mostra um pequeno aviso ao passar o mouse */
+}
+
+/* =========================================
+   Estilos do Modal (Pop-up de Biografia)
+   ========================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.85); /* Fundo escuro semitransparente */
+  backdrop-filter: blur(4px); /* Borra o fundo (opcional, fica elegante) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: var(--color-surface);
+  width: 90%;
+  max-width: 550px;
+  max-height: 85vh;
+  padding: 40px 32px 32px;
+  border-radius: 16px;
+  position: relative;
+  overflow-y: auto; /* Permite rolar caso a bio seja gigante */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.ativo .modal-content {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #64748b;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #ef4444;
+}
+
+.modal-content img {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+.modal-content h3 {
+  font-size: 1.5rem;
+  color: var(--color-text-main);
+  margin-bottom: 4px;
+}
+
+.graduacao-modal {
+  display: inline-block;
+  background: #f1f5f9;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.modal-content p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  text-align: justify;
+}
+
+.modal-sociais {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 24px;
+}

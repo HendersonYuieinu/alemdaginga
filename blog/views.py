@@ -21,6 +21,8 @@ def eventos_index(request):
 def sobre_blog(request):
     return render(request, 'blog/sobre.html' )
 
+def integrantes(request):
+    return render(request, 'blog/integrantes.html')
 
 
 def evento_detalhe(request, slug):

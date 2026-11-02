@@ -5,12 +5,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventos - Além da Ginga</title>
+  <title>Integrantes - Além da Ginga</title>
   <link rel="shortcut icon" href={% static "img/logo-ginga.png" %} type="image/x-icon">
   <link rel="stylesheet" href={% static "css/integrantes.css" %}>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Cabeçalho Intacto -->
   <header>
     <div class="logo">
       <img src={% static 'img/logo-ginga.png' %} alt="Logo Além da Ginga">
@@ -25,36 +26,159 @@
     </nav>
   </header>
 
+  <!-- Conteúdo Principal -->
   <main>
-    <!-- Título de Eventos -->
-    <section id="eventos-intro">
-      <h1>Nossos Eventos</h1>
-      <p>Aqui você pode ver todos os nossos eventos, que já ocorreram e que irão ocorrer. Fique sempre por dentro das novidades.</p>
+    <section id="integrantes-intro">
+      <div class="filtros">
+        <button class="ativo">Mestres</button>
+        <button>Bolsistas</button>
+        <button>Mídia</button>
+      </div>
     </section>
 
-    <!-- Lista de Eventos -->
-    <section id="eventos-lista">
-      <div class="eventos-container">
-        
-        <!-- Card de evento 1 -->
-        <div class="evento-card">
-          <img src={% static "img/Copaquilombo.jpeg" %} alt="Imagem da Copa Quilombo">
-          <div class="evento-info">
-            <h3>Copa Quilombo</h3>
-            <p>📅 29 de novembro | 📍 Castanhal - PA<br><br>
-            A Copa Quilombo chega para celebrar a força, a história e a resistência da nossa capoeira amazônica! Um evento aberto a TODOS os grupos, com categorias de base e adulto, muitos prêmios e, acima de tudo, a valorização de quem faz a nossa arte pulsar.</p>
-            <div class="evento-acoes">
-              <a href="https://www.instagram.com/p/Dc4syGhFh2-/?igsi=OXUxN3NuNmkyNG1s" target="_blank">Saiba mais</a>
-              <a href="https://docs.google.com/forms/d/1gUNEoCvn21JT8FTIdyfeB-2ILQYALZ2hnYDLTrHfJCM/edit" target="_blank">Formulário de Inscrição</a>
+    <section id="integrantes-lista">
+      
+      <!-- Categoria: MESTRES -->
+      <div class="integrantes-categoria">
+        <h3>MESTRES</h3>
+        <div class="integrantes-container">
+          
+          <!-- Note o atributo data-bio="", é aqui que a bio completa vai ficar guardada -->
+          <div class="integrante-card" data-bio="Mestre Guto iniciou sua jornada na capoeira aos 10 anos. Dedica-se integralmente a preservar a tradição e cultura da capoeira na região de Castanhal, coordenando projetos sociais que atendem jovens em situação de vulnerabilidade. Possui formação em Educação Física e é uma das maiores referências do estado.">
+            <img src={% static "img/mestre1.jpeg" %} alt="Mestre Guto" class="foto-circular mestre-borda" onerror="this.src='https://placehold.co/100x100'">
+            <div class="integrante-info">
+              <h4>Mestre Guto</h4>
+              <span class="graduacao">Mestre</span>
+              <p>Dedica-se a preservar a tradição e cultura da capoeira na região...</p>
+              <div class="integrante-sociais">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
             </div>
           </div>
-        </div>
 
+          <div class="integrante-card" data-bio="Texto da biografia completa do Mestre Capoeira. Aqui você pode escrever um parágrafo mais longo contando a história, as rodas que participou e o impacto na comunidade.">
+            <img src={% static "img/mestre2.jpeg" %} alt="Mestre Capoeira" class="foto-circular mestre-borda" onerror="this.src='https://placehold.co/100x100'">
+            <div class="integrante-info">
+              <h4>Mestre Capoeira</h4>
+              <span class="graduacao">Mestre</span>
+              <p>Dedica-se a preservar a tradição e cultura da capoeira na região...</p>
+              <div class="integrante-sociais">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="integrante-card" data-bio="Texto da biografia completa do Mestre Capore.">
+            <img src={% static "img/mestre3.jpeg" %} alt="Mestre Capore" class="foto-circular mestre-borda" onerror="this.src='https://placehold.co/100x100'">
+            <div class="integrante-info">
+              <h4>Mestre Capore</h4>
+              <span class="graduacao">Mestre</span>
+              <p>Dedica-se a preservar a tradição e cultura da capoeira na região...</p>
+              <div class="integrante-sociais">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
+
+      <!-- Categoria: BOLSISTAS -->
+      <div class="integrantes-categoria">
+        <h3>BOLSISTAS</h3>
+        <div class="integrantes-container">
+          
+          <div class="integrante-card" data-bio="Ana é estudante de Educação Física na UFPA e bolsista do projeto. Ela leciona para as turmas infantis e ajuda a organizar os eventos e rodas.">
+            <img src={% static "img/bolsista1.jpeg" %} alt="Bolsista Ana" class="foto-circular" onerror="this.src='https://placehold.co/100x100'">
+            <div class="integrante-info">
+              <h4>Bolsista Ana</h4>
+              <span class="graduacao">Bolsista</span>
+              <p>Formada pela UFPA, leciona capoeira para crianças e adultos...</p>
+              <div class="integrante-sociais">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="integrante-card" data-bio="Carlos é graduado e bolsista de extensão. Trabalha com as turmas de adultos e auxilia na parte musical do grupo Além da Ginga.">
+            <img src={% static "img/bolsista2.jpeg" %} alt="Bolsista Carlos" class="foto-circular" onerror="this.src='https://placehold.co/100x100'">
+            <div class="integrante-info">
+              <h4>Bolsista Carlos</h4>
+              <span class="graduacao">Bolsista</span>
+              <p>Formada pela UFPA, leciona capoeira para crianças e adultos...</p>
+              <div class="integrante-sociais">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Categoria: MÍDIA -->
+      <div class="integrantes-categoria">
+        <h3>MÍDIA</h3>
+        <div class="integrantes-container">
+          
+          <div class="integrante-card" data-bio="Responsável por captar a energia das rodas através das lentes. Fotógrafo e videomaker do projeto Além da Ginga.">
+            <img src={% static "img/midia1.jpeg" %} alt="Mídia 1" class="foto-circular" onerror="this.src='https://placehold.co/100x100'">
+            <div class="integrante-info">
+              <h4>Fotógrafo João</h4>
+              <span class="graduacao">Audiovisual</span>
+              <div class="integrante-sociais" style="margin-top: 16px;">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Banner Mais Integrantes -->
+      <div class="mais-integrantes">
+        <div>
+          <strong>MAIS INTEGRANTES E VOLUNTÁRIOS:</strong>
+          <p>Agradecemos a todos!</p>
+        </div>
+        <button class="btn-ver-todos">VER TODOS</button>
+      </div>
+
     </section>
   </main>
 
-  <!-- Rodapé (Site Footer idêntico ao sobre.html) -->
+  <!-- MODAL DE BIOGRAFIA -->
+  <div id="bioModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Fechar">&times;</button>
+      <img id="modalImg" src="" alt="Foto do Integrante">
+      <h3 id="modalName">Nome</h3>
+      <span id="modalGraduacao" class="graduacao-modal">Graduação</span>
+      <p id="modalBio">Biografia completa aparecerá aqui...</p>
+      <div id="modalSocials" class="integrante-sociais modal-sociais">
+        <!-- Ícones clonados virão para cá via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé Intacto -->
   <footer class="site-footer">
     <section id="patrocinadores-secao">
       
@@ -93,5 +217,7 @@
     </section>
   </footer>
 
+  <!-- SCRIPT PARA ABRIR O MODAL -->
+  <script src={% static "js/integrantes.js" %}></script>
 </body>
 </html>
