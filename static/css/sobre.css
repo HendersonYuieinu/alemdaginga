@@ -79,6 +79,7 @@ header h1 {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  padding-left: 0;
 }
 
 .navbar a {
@@ -108,10 +109,10 @@ section {
 
 /* Tipografia Geral */
 h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #0f172a;
-  letter-spacing: -0.025em;
+  font-size: 2em;
+  /* font-weight: 800; */
+  /* color: #0f172a; */
+  /* letter-spacing: -0.025em; */
   margin-bottom: 24px;
   line-height: 1.1;
 }
@@ -143,7 +144,7 @@ strong {
 /* Listas */
 ul {
   padding-left: 16px;
-  margin-bottom: 32px;
+  /* margin-bottom: 32px; */
 }
 
 ul li {
@@ -274,6 +275,7 @@ ul li::marker {
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 #equipe p strong {
@@ -431,21 +433,7 @@ ul li::marker {
    Responsividade (Telas Menores)
    ========================================= */
 @media (max-width: 716px) {
-  body {
-    font-size: 1rem;
-  }
 
-  h1 { 
-    font-size: 2.5rem; 
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-  }
 
   main {
     width: 100%;
