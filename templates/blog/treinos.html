@@ -1,0 +1,136 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Altere o título para o nome da nova página -->
+  <title>Nome da Nova Página - Além da Ginga</title>
+  
+  <link rel="shortcut icon" href={% static "img/logo-ginga.png" %} type="image/x-icon">
+  
+  <!-- Link para o CSS Padrão -->
+  <link rel="stylesheet" href={% static "css/treinos.css" %}>
+  
+  <!-- Font Awesome para os ícones do rodapé -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- ================= CABEÇALHO PADRÃO ================= -->
+  <header>
+    <div class="logo">
+      <img src={% static "img/logo-ginga.png" %} alt="Logo Além da Ginga">
+      <h1>ALEM DA GINGA</h1>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href={% url 'blog:home' %}>Página inicial</a></li>
+        <li><a href={% url 'blog:eventos' %}>Eventos</a></li>
+        <li><a href={% url 'blog:sobre' %}>Sobre</a></li>
+        <!-- Adicione novos links aqui se necessário -->
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+  <!-- Toda a parte específica da página deve ficar dentro da tag <main> -->
+  <main>
+    
+    <section id="introducao">
+      <h1>Locais de treino</h1>
+      <p>Está página é dedicada a informar aos novos integrantes os locais onde o projeto é realizado.</p>
+    </section>
+    
+    <section id="conteudo-UFPA">
+      <h3>Ginásio Poliesportivo da UFPA Campus Castanhal</h3>
+      <p><strong>Av. dos Universitários, s/n - Jaderlândia, Castanhal - PA.</strong><br>
+                <a href="https://maps.app.goo.gl/MR3pk1aFgGk53ak47" target="_blank">ver no mapa</a></p>
+      
+      <p>Nosso projeto é realizado principalmente dentro da quadra de esportes do Ginásio da Universidade, ocasionalmente realizado dentro da sala dos espelhos, também localizado no Ginásio, à esquerda na entrada.
+         Para participar é simples, compareça ao local e comece a treinar!
+      </p>
+      <ul>
+        <li>Dias: <strong>Terça e Quinta</strong></li>
+        <li>Horário: <strong>17:30 - 19:00</strong></li>
+        <li>Responsável: <strong>Mestre Michel / Mestre Presunto</strong></li>
+      </ul>
+      <br><hr><br>
+
+      <h3>CRAS do Apeú</h3>
+      <p><strong>Tv. Prof. Amaral, 2-88 - Apeú, Castanhal - PA.</strong><br>
+                <a href="https://maps.app.goo.gl/wUXczjT6w9EH5CS4A" target="_blank">ver no mapa</a></p>
+      
+      <p>Local referente a extensão do projeto no Apeú, no CRAS, toda semana às Quartas-feiras pela manhã e tarde.</p>
+      <ul>
+        <li>Dias: <strong>Quarta-feira</strong></li>
+        <li>Horário: <strong>09:00 - 11:30 / 14:00 - 16:30</strong></li>
+        <li>Responsável: <strong>Mestre Michel</strong></li>
+      </ul>
+      <br><hr><br>
+
+      <h3>Quilombo de Macapazinho</h3>
+      <p><strong>logo logo pegarei a localização..</strong><br>
+                <a href="#" target="_blank">ver no mapa</a></p>
+      <p>Local referente a extensão do projeto dentro do quilombo de macapazinho, realizado nas quartas e sextas pela tarde.</p>
+      <ul>
+        <li>Dias: <strong>Quarta e Sexta</strong></li>
+        <li>Horário: <strong>14:30 - 16:00</strong></li>
+        <li>Responsável: <strong>Meia Noite</strong></li>
+      </ul>
+      <br><hr><br>
+
+      <h3>Condomínio Quinta do Bosque</h3>
+      <p><strong>Av. Máximino Porpino da Silva, 632 - Cariri, Castanhal - PA.</strong><br>
+                <a href="https://maps.app.goo.gl/gdM7BQQrBXLUMHUD8" target="_blank">ver no mapa</a></p>
+      <p>Nosso projeto também ocorre dentro do Quinta do Bosque, onde acontece o treino das crianças. Para esse local é cobrado uma valor aos participantes. Qualquer interesse, entrar em contato com o mestre Presunto.</p>
+      <ul>
+        <li>Dias: <strong>Segunda e Quarta</strong></li>
+        <li>Horário: <strong>17:00 - 18:00</strong></li>
+        <li>Responsável: <strong>Mestre Presunto.</strong></li>
+      </ul>  
+    </section>
+
+  </main>
+
+  <!-- ================= RODAPÉ PADRÃO ================= -->
+  <footer class="site-footer">
+    <section id="patrocinadores-secao">
+      
+      <!-- Coluna 1: Redes Sociais e Infos -->
+      <div class="footer-social-wrapper">
+        <h2>Conecte-se conosco</h2>
+        <p style="margin-bottom: 24px;">@alemdaginga</p>
+        
+        <div class="footer-social-icons">
+          <a href="https://www.tiktok.com/@alemdaginga?_r=1&_t=ZS-991d1IFkJmf" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://facebook.com/alemdaginga" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/+5509193571306" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/alemdagingacapoeira?igsi=MXR1a3l2a2ZmcWxrcg%3D%3D" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="footer-tags">
+          <span>Capoeira</span>
+          <span>Esporte</span>
+          <span>Cultura</span>
+          <span>Além da Ginga</span>
+          <span>Social</span>
+        </div>
+      </div>
+
+      <!-- Coluna 2: Patrocinadores -->
+      <div class="footer-sponsors-wrapper">
+        <h2>Patrocinadores e Apoiadores</h2>
+        <div class="patrocinadores">
+          <img src={% static "img/patrocinador-1.jpeg" %} alt="Patrocinador 1" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+          <img src={% static "img/patrocinador-2.jpeg" %} alt="Patrocinador 2" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+          <img src={% static "img/patrocinador-3.jpeg" %} alt="Patrocinador 3" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+          <img src={% static "img/patrocinador-4.jpeg" %} alt="Patrocinador 4" onerror="this.src='https://placehold.co/100x50/ffffff/94a3b8?text=Apoio'">
+        </div>
+      </div>
+
+    </section>
+  </footer>
+</body>
+</html>

@@ -18,13 +18,6 @@ def eventos_index(request):
     }
     return render(request, 'blog/eventos-index.html', contexto)
 
-def sobre_blog(request):
-    return render(request, 'blog/sobre.html' )
-
-def integrantes(request):
-    return render(request, 'blog/integrantes.html')
-
-
 def evento_detalhe(request, slug):
     evento = get_object_or_404(Evento, slug=slug)
     contexto = {
@@ -39,3 +32,12 @@ def post_completo(request, slug):
     }
     
     return render(request, 'blog/template.html', contexto)
+
+def sobre_blog(request):
+    return render(request, 'blog/sobre.html' )
+
+def integrantes(request):
+    return render(request, 'blog/integrantes.html')
+
+def local_treino(request):
+    return render(request, 'blog/treinos.html')    

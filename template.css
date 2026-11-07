@@ -49,10 +49,7 @@ body {
    Tipografia Base
    ========================================= */
 h1 {
-  font-size: 3rem;
-  /* font-weight: 800;
-  color: #0f172a;
-  letter-spacing: -0.025em; */
+  font-size: 2em;
   margin-bottom: 24px;
   line-height: 1.1;
 }
@@ -72,7 +69,6 @@ h3 {
 }
 
 p {
-  color: var(--color-text-muted);
   margin-bottom: 20px;
   text-align: justify;
 }
@@ -83,13 +79,14 @@ strong {
 
 /* Estilo padrão para listas */
 ul {
-  padding-left: 24px;
-  margin-bottom: 32px;
+  padding-left: 16px;
+  /* margin-bottom: 32px; */
 }
 
 ul li {
   margin-bottom: 8px;
   color: var(--color-text-muted);
+  width: max-content;
 }
 
 ul li::marker {
@@ -122,22 +119,35 @@ header {
   border-bottom: 1px solid rgba(226, 232, 240, 0.6);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  align-self: normal;
+  gap: 8px;
+}
+
 .logo img {
   height: 8rem;
   object-fit: contain;
   border-radius: 8px;
 }
 
+header h1 {
+  margin: 0;
+  display: inline-block;
+}
+
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 24px;
+  gap: 16px;
+  padding-left: 0;
 }
 
 .navbar a {
   text-decoration: none;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: bold;
   color: #475569;
   transition: color 0.2s ease;
 }
@@ -158,7 +168,7 @@ header {
 }
 
 #patrocinadores-secao {
-  max-width: var(--max-width-header);
+  max-width: 1024px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -241,14 +251,13 @@ header {
    Responsividade (Telas Menores)
    ========================================= */
 @media (max-width: 716px) {
-  /* h1 { font-size: 2.5rem; } */
-  
   #patrocinadores-secao {
     grid-template-columns: 1fr; /* Rodapé empilhado no celular */
+    gap: 32px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 782px) {
   header {
     flex-direction: column;
     gap: 16px;

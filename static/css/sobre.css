@@ -78,7 +78,6 @@ header h1 {
   list-style: none;
   display: flex;
   gap: 16px;
-  flex-wrap: wrap;
   padding-left: 0;
 }
 
@@ -150,7 +149,7 @@ ul {
 ul li {
   margin-bottom: 8px;
   color: var(--color-text-muted);
-  max-width: 100%;
+  max-width: max-content;
 }
 
 ul li::marker {
@@ -244,13 +243,13 @@ ul li::marker {
   padding-bottom: 24px;
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
   animation: scrollContinuous 30s linear infinite;
 }
 
-.carousel-track::-webkit-scrollbar {
+/* .carousel-track::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .carousel-track img {
   width: 280px;
@@ -434,12 +433,6 @@ ul li::marker {
    ========================================= */
 @media (max-width: 716px) {
 
-
-  main {
-    width: 100%;
-    padding: 40px 16px;
-  }
-
   .hero > img,
   .hero-text > img {
     float: none;
@@ -451,10 +444,6 @@ ul li::marker {
   .imagens-laterais {
     grid-template-columns: 1fr; /* Transforma as fotos do histórico em 1 coluna no celular */
     padding: 16px;
-  }
-
-  .patrocinadores {
-    grid-template-columns: 1fr 1fr;
   }
 
   #patrocinadores-secao {

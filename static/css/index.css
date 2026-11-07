@@ -172,7 +172,7 @@ Rodapé Padrão
 }
 
 #patrocinadores-secao {
-  max-width: var(--max-width-header);
+  max-width: 1024px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -258,10 +258,11 @@ Responsividade (Telas Menores)
   /* h1 { font-size: 2.5rem; } */
   #patrocinadores-secao {
     grid-template-columns: 1fr; /* Rodapé empilhado no celular */
+    gap: 32px;
   }
 }
 
-@media (max-width: 782px) {
+@media (max-width: 716px) {
 
   aside {
   order: -1;
@@ -365,13 +366,10 @@ NOVO LAYOUT: DUAS COLUNAS (Estilo Blog/Artigos)
 }
 
 /* --- Responsividade do Novo Layout --- */
-@media (max-width: 860px) {
+@media (max-width: 716px) {
   .blog-layout {
     grid-template-columns: 1fr;
     gap: 40px;
   }
   
-  .newsletter-form {
-    flex-direction: column;
-  }
 }
