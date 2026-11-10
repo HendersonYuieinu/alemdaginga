@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3@5=njviooxfilz$ls%f-^3vxx@*(q-g3)!!a!m$nn8)nz+d@&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1',]
 
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -121,6 +122,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [BASE_DIR/"static"]
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 # Email
@@ -140,9 +142,18 @@ STORAGES = {
         "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
     },
     "staticfiles": {
-        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        # "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
     },
 }
+
+WHITENOISE_MANIFEST_STRICT = False
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+STATICFILES_IGNORE_PATTERNS = [
+    'admin/js/vendor/select2/i18n/*',
+]
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'vcfrtlda',

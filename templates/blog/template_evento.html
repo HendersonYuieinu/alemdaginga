@@ -5,8 +5,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <meta property="og:title" content="{{ evento.titulo }}">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="{% static 'img/logo-ginga.png' %}">
+  <meta property="og:site_name" content="Blog Além da Ginga">
+
+  
+
   <!-- Altere o título para o nome da nova página -->
-  <title>Nome da Nova Página - Além da Ginga</title>
+  <title>{{ evento.titulo }} - Além da Ginga</title>
   
   <link rel="shortcut icon" href="{% static 'img/logo-ginga.png' %}" type="image/x-icon">
   
