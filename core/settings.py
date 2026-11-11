@@ -147,13 +147,7 @@ STORAGES = {
     },
 }
 
-WHITENOISE_MANIFEST_STRICT = False
-
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-STATICFILES_IGNORE_PATTERNS = [
-    'admin/js/vendor/select2/i18n/*',
-]
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'vcfrtlda',
