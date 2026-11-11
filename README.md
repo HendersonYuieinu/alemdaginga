@@ -7,7 +7,6 @@
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
 [![Cloudinary](https://img.shields.io/badge/Cloudinary-Media-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)](https://cloudinary.com/)
 [![Render](https://img.shields.io/badge/Render-Backend-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://render.com/)
-[![Vercel](https://img.shields.io/badge/Vercel-Frontend-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
 ---
 
@@ -45,8 +44,7 @@ O projeto aplica boas práticas de engenharia de software, separação de respon
 - **Font Awesome** (Ícones)
 
 ### **Deploy & Infraestrutura**
-- **Render** (Hospedagem do Backend/Aplicação Django)
-- **Vercel / UFPA Server** (Hospedagem de recursos estáticos e frontend)
+- **Render** (Hospedagem inicial do Backend/Aplicação Django e do Frontend)
 - **Git & GitHub** (Controle de versão)
 
 ---
@@ -63,3 +61,4 @@ alemdaginga/
 ├── requirements.txt       # Dependências do projeto Python
 ├── manage.py              # CLI do Django
 └── README.md              # Documentação do projeto
+
