@@ -170,7 +170,6 @@ ul li {
 }
 
 .evento-info p {
-  text-align: left; /* Melhora a leitura em cards */
   flex-grow: 1;
 }
 

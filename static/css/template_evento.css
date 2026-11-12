@@ -85,7 +85,7 @@ strong {
 ul li {
   margin-bottom: 8px;
   color: var(--color-text-muted);
-  width: max-content;
+  /* width: max-content; */
 }
 
 ul li::marker {
@@ -141,10 +141,13 @@ section {
 
 .conteudo-column {
   display: block;
+  contain: inline-size;
 }
 
 .eventologo{
   max-width: 100%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .sidebar-widget {

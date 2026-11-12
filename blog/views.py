@@ -12,7 +12,7 @@ def home_blog(request):
     return render(request, 'blog/index.html', contexto)
 
 def eventos_index(request):
-    eventos = Evento.objects.all().order_by('data_inicio')
+    eventos = Evento.objects.all().order_by('-data_inicio')
     contexto = {
         'eventos' : eventos
     }

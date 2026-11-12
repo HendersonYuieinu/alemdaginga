@@ -45,10 +45,10 @@
 
     <main class="detalhes-layout">
         <div class="conteudo-column">
-            <h2>{{evento.titulo}}</h2>
             {% if evento.capa %}
             <center><img class="eventologo" src="{{ evento.capa.url }}" alt="{{ evento.titulo }}"></center>
             {% endif %}
+            <h2>{{evento.titulo}}</h2>
     
             {{ evento.descricao |markdown }}
         </div>
@@ -59,16 +59,34 @@
                     <h3>Detalhes do Evento</h3>
                 </div>
                 <ul class="event-info">
-                    <li><p><i class="fa-solid fa-play"></i> <strong>Data: </strong>{{ evento.data_inicio|date }}</p></li>
-                    <li><p><i class="fa-solid fa-play"></i> <strong>Hora: </strong>{{ evento.data_inicio|date:"H:i" }}</p></li>
+                    <li>
+                        <p>
+                            <i class="fa-solid fa-play"></i> <strong>Data: </strong>
+                                {% if evento.data_fim and evento.data_fim != evento.data_inicio.date %}
+                                    {{ evento.data_inicio|date:"d" }} a {{ evento.data_fim|date }}
+                                {% else %}
+                                    {{ evento.data_inicio|date }}
+                                {% endif %}
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fa-solid fa-play"></i> <strong>Hora: </strong>
+                                {% if evento.data_fim and evento.data_fim != evento.data_inicio.date %}
+                                    A partir das {{ evento.data_inicio|date:"H:i" }} (1º dia)
+                                {% else %}
+                                    {{ evento.data_inicio|date:"H:i" }}
+                                {% endif %}
+                         </p>
+                    </li>
                     <li><p><i class="fa-solid fa-play"></i> <strong>Local: </strong>{{ evento.local }}</p></li>
                     <li><p><i class="fa-solid fa-play"></i> <strong>Valor: </strong>{{ evento.valor }}</p></li>
-                    <li><p><i class="fa-solid fa-play"></i> <strong>Status </strong>{{ evento.status }}</p></li>
+                    <li><p><i class="fa-solid fa-play"></i> <strong>Status: </strong>{{ evento.status }}</p></li>       
                     
                     
                 </ul>
                 <div class="botao_inscricao">
-                    <a href="{{ evento.link_inscricao }}"><button>Inscrever-se</button></a>
+                    <a href="{{ evento.link_inscricao }}" target="_blank"><button>Inscrever-se</button></a>
                 </div>
                    
             </div>
