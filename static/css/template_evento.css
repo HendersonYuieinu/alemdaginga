@@ -92,6 +92,10 @@ ul li::marker {
   color: var(--color-brand);
 }
 
+ul li p {
+  text-align: left;
+}
+
 /* =========================================
    Layout e Estrutura Principal
    ========================================= */

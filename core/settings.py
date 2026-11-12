@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'cloudinary_storage',
-    'django.contrib.staticfiles',
     'cloudinary',
+    'django.contrib.staticfiles',
     'blog'
 ]
 
@@ -135,7 +135,6 @@ MAILERS = {
 }
 
 MEDIA_URL = '/AlemdaGinga/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 STORAGES = {
     "default": {
@@ -146,8 +145,6 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
     },
 }
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'vcfrtlda',
