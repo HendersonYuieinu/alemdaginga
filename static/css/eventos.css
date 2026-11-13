@@ -129,7 +129,7 @@ p {
 ul li {
   margin-bottom: 8px;
   color: var(--color-text-muted);
-  width: max-content;
+  /* width: max-content; */
 }
 /* =========================================
    Sessão de Eventos (Cards)

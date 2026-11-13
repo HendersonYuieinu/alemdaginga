@@ -149,7 +149,7 @@ ul {
 ul li {
   margin-bottom: 8px;
   color: var(--color-text-muted);
-  max-width: max-content;
+  /* max-width: max-content; */
 }
 
 ul li::marker {
