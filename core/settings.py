@@ -83,6 +83,17 @@ DATABASES = {
     )
 }
 
+# Cache configuration
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',
+        'OPTIONS': {
+            'MAX_ENTRIES': 300,  # Guarda no máximo 300 itens na RAM
+            'CULL_FREQUENCY': 3, # Apaga 1/3 dos itens antigos se atingir o limite
+        }
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/6.1/ref/settings/#auth-password-validators
