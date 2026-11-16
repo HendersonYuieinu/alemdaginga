@@ -18,7 +18,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'dfidafihachaveinseguraLOL')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = ['https://*.onrender.com']
 # Application definition
