@@ -58,7 +58,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.875rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #0f172a;
   margin-bottom: 24px;
@@ -97,6 +97,18 @@ ul li::marker {
   color: var(--color-brand);
 }
 
+ol {
+  padding-left: 16px;
+}
+
+ol li {
+  margin-bottom: 8px;
+  color: var(--color-text-muted);
+}
+
+ol li::marker {
+  color: var(--color-brand);
+}
 /* =========================================
    Layout e Estrutura Principal
    ========================================= */
@@ -114,10 +126,6 @@ main {
   text-align: center;
 }
 
-.conteudo {
-  text-align: justify;
-}
-
 .conteudo img {
   max-width: 100%;
   display: block;
@@ -126,6 +134,16 @@ main {
 
 section {
   margin-bottom: 60px;
+}
+
+#subtitulo {
+  font-size: 1.5rem;      /* 18px: equilíbrio entre o h1 e o parágrafo */
+  font-weight: 400;         /* peso normal para dar contraste com o h1 */
+  color: #475569;           /* cinza-ardósia da mesma paleta do seu #0f172a */
+  line-height: 1.5;
+  text-align: center;       /* obrigatório para anular o text-align: justify do p */
+  max-width: 650px;
+  margin: 0 auto 32px;      /* centraliza o bloco e dá respiro antes do texto */
 }
 
 /* =========================================
