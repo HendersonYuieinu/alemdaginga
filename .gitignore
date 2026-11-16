@@ -1,34 +1,4 @@
-# Banco de dados SQLite
-db.sqlite3
-
-# Arquivos de ambiente
 .env
-
-# Arquivos compilados do Python
-*.pyc
-*.pyo
-*.pyd
-__pycache__/
-
-# Migrações (se quiser ignorar, mas normalmente é bom versionar)
-# */migrations/__pycache__/
-# */migrations/*.pyc
-
-# Arquivos estáticos gerados (não os que você criou em static/, mas os coletados)
 staticfiles/
-
-# Configurações locais
-local_settings.py
-
-# Logs
-*.log
-
-# Ambientes virtuais
-venv/
-env/
-ENV/
-
-# Arquivos de IDEs
-.vscode/
-.idea/
-*.swp
+__pycache__/
+*.sqlite3

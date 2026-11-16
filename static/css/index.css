@@ -132,6 +132,7 @@ header {
   height: 8rem;
   object-fit: contain;
   border-radius: 8px;
+  mix-blend-mode: multiply;
 }
 
 header h1 {
@@ -175,7 +176,7 @@ Rodapé Padrão
   max-width: 1024px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   gap: 48px;
 }
 
@@ -188,7 +189,7 @@ Rodapé Padrão
 /* Grid de Patrocinadores */
 .patrocinadores {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
@@ -200,6 +201,7 @@ Rodapé Padrão
   width: 100%;
   object-fit: contain;
   transition: transform 0.3s ease;
+  /* object-fit: cover; */
 }
 
 .patrocinadores img:hover {
@@ -265,9 +267,18 @@ Responsividade (Telas Menores)
 @media (max-width: 716px) {
 
   aside {
-  order: -1;
-  } 
-  
+    order: -1;
+  }
+
+  .popular-posts-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .popular-posts-list li {
+    flex: 1 1 50%;
+  }
+
   header {
     flex-direction: column;
     gap: 16px;

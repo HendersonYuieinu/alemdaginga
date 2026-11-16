@@ -67,6 +67,7 @@ header {
   object-fit: contain;
   border-radius: 8px;
   max-width: 100%;
+  mix-blend-mode: multiply;
 }
 
 header h1 {
@@ -329,7 +330,7 @@ ul li::marker {
   max-width: 1024px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr; */
   gap: 48px;
 }
 
@@ -341,7 +342,7 @@ ul li::marker {
 
 .patrocinadores {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
@@ -352,9 +353,10 @@ ul li::marker {
   height: 96px;
   width: 100%;
   object-fit: contain;
-  /* mix-blend-mode: multiply; */
   transition: transform 0.3s ease;
+  /* object-fit: cover; */
 }
+
 
 .patrocinadores img:hover {
   transform: scale(1.05);

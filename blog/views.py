@@ -37,6 +37,7 @@ def sobre_blog(request):
     return render(request, 'blog/sobre.html' )
 
 def integrantes(request):
+    
     return render(request, 'blog/integrantes.html')
 
 def local_treino(request):
