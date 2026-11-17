@@ -10,5 +10,6 @@ urlpatterns = [
     path('post/<slug:slug>/', views.post_completo, name='post_completo'),
     path('eventos/<slug:slug>/', views.evento_detalhe, name='evento_detalhe'),
     path('integrantes', views.integrantes, name= 'integrantes'),
-    path('localTreino', views.local_treino, name='local_treino')
+    path('localTreino', views.local_treino, name='local_treino'),
+    path('health', views.health, name='health')
 ]

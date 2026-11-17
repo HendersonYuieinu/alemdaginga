@@ -42,3 +42,6 @@ def integrantes(request):
 
 def local_treino(request):
     return render(request, 'blog/treinos.html')    
+
+def health(request):
+    return HttpResponse("Hello world")
