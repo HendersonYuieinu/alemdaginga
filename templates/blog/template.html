@@ -46,7 +46,7 @@
   <main>
     {% if post.capa %}
     <center>
-      <img class="postlogo" src="{{ post.capa.url }}" alt="{{ post.titulo }}">
+      <img class="postlogo" src="{{ post.capa_otimizada }}" alt="{{ post.titulo }}">
     </center>
     {% endif %}
 
@@ -56,7 +56,7 @@
     </div>
     <br>
     <div class="conteudo">
-      {{ post.conteudo |markdown }}
+      {{ post.conteudo_otimizado |markdown }}
 
     </div>
 

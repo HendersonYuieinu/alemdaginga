@@ -45,7 +45,7 @@
       {% for evento in eventos %}
         <div class="evento-card">
           {% if evento.capa %}
-          <img src={{ evento.capa.url }} alt="Imagem da Copa Quilombo">
+          <img src={{ evento.capa_otimizada }} alt="Imagem">
           {% endif %}
 
           <div class="evento-info">

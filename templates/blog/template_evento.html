@@ -46,7 +46,7 @@
     <main class="detalhes-layout">
         <div class="conteudo-column">
             {% if evento.capa %}
-            <center><img class="eventologo" src="{{ evento.capa.url }}" alt="{{ evento.titulo }}"></center>
+            <center><img class="eventologo" src="{{ evento.capa_otimizada }}" alt="{{ evento.titulo }}"></center>
             {% endif %}
             <h2>{{evento.titulo}}</h2>
     

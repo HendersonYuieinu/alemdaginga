@@ -20,6 +20,25 @@ class Postagem(models.Model):
          
     def __str__(self):
         return self.titulo
+    
+    @property
+    def capa_otimizada(self):
+        if self.capa and 'res.cloudinary.com' in self.capa.url:
+            return self.capa.url.replace(
+                '/upload/',
+                '/upload/f_auto,q_auto,w_800,c_limit/'
+            )
+        return self.capa.url if self.capa else ''
+    
+    @property
+    def conteudo_otimizado(self):
+        if not self.conteudo:
+            return ''
+        # Otimiza todas as URLs do Cloudinary dentro do Markdown (antigas e novas)
+        return self.conteudo.replace(
+            'res.cloudinary.com/vcfrtlda/image/upload/',
+            'res.cloudinary.com/vcfrtlda/image/upload/f_auto,q_auto,w_800,c_limit/'
+        )
 
 
 
@@ -44,6 +63,14 @@ class Evento(models.Model):
     def __str__(self):
         return self.titulo
     
+    @property
+    def capa_otimizada(self):
+        if self.capa and 'res.cloudinary.com' in self.capa.url:
+            return self.capa.url.replace(
+                '/upload/',
+                '/upload/f_auto,q_auto,w_800,c_fill/'
+            )
+        return self.capa.url if self.capa else ''
 
 class Integrante(models.Model):
     nome = models.CharField(max_length=50)
@@ -56,3 +83,12 @@ class Integrante(models.Model):
     
     def __str__(self):
         return self.nome
+    
+    @property
+    def foto_otimizada(self):
+        if self.foto and 'res.cloudinary.com' in self.foto.url:
+            return self.foto.url.replace(
+                '/upload/',
+                '/upload/f_auto,q_auto,w_800,c_fill/'
+            )
+        return self.foto.url if self.foto else ''
