@@ -1,0 +1,226 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graduacao - Guia do aluno</title>
+  
+  <link rel="shortcut icon" href={% static "img/logo-ginga.png" %} type="image/x-icon">
+  
+  <link rel="stylesheet" href={% static "css/graduacao.css" %}>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src={% static "img/logo-ginga.png" %} alt="Logo Além da Ginga">
+      <h1>ALEM DA GINGA</h1>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href={% url 'blog:home' %}>Blog</a></li>
+        <li><a href={% url 'blog:eventos' %}>Eventos</a></li>
+        <li><a href={% url 'blog:sobre' %}>Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    
+    <section id="introducao">
+      <h1>Graduações do grupo</h1>
+      <p>O grupo de Capoeira Dança e Luta possui uma graduação simboliza por cordas com cores. A corda simboliza a
+        corda que amarravam os escravos. As cores verde, amarelo, azul e branco (crua) simbolizam as cores da bandeira do
+        Brasil e o vermelho o sangue derramado por todos os capoeiras.
+      </p>
+      <p>O aluno quando entra no grupo ele passa por um período de orientação e treinamento na capoeira e durante este tempo
+        ele não usa corda. A corda somente será dada durante os eventos de Batizado e Troca de Corda do grupo.
+      </p>
+      <p id="observacao-sobre"><i>obs: O projeto tem origens no grupo de capoeira Dança e Luta. Desta forma, nossas cores e requisitos podem ser diferentes
+        de outros grupos, respeitamos cada metodologia e a graduação obtida em outros grupos ao qual o participante fez parte.
+      </i></p>
+    </section>
+    
+    <section class="estagio" id="aluno-iniciante">
+      <p>O primeiro estágio corresponde ao de <strong>Aluno Iniciante</strong>, simbolizado pelo uso da cor crua (branca) na corda</p>
+      <div class="corda">
+        <div class="corda-img">
+            <img src={% static 'img/cordas/01 Corda Crua.jpg' %} alt="corda crua">  
+        </div>
+        <div class="info-corda">
+            <p>A <b>Primeira Graduação</b> corresponde ao primeiro nível de aluno iniciante, simbolizado pela <b>Corda Crua</b>
+            , devendo atender aos requisitos:</p>
+            <ul>
+                <li>
+                    Noções dos movimentos básicos da capoeira: <em>Ginga, Benção, Martelo, Queixada por dentro e 
+                    meia-lua de frente;</em>
+                </li>
+                <li>
+                    Noções de movimentação de chão: <em>Rolê;</em>
+                </li>
+                <li>
+                    Noções de esquivas;
+                </li>
+                <li>
+                    Noções de musicalidade da capoeira: <em>Bater palma e responder o coro;</em>
+                </li>
+                <li>
+                    Apresentar responsabilidade e disciplina aos treinos.
+                </li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="corda">
+        <div class="corda-img">
+            <img src="{% static 'img/cordas/02 Corda Verde-Crua.jpg'%}" alt="corda verde e crua">
+        </div>
+        <div class="info-corda">
+            <p>A <b>Segunda Graduação</b> corresponde ao segundo nível de aluno iniciante, simbolizado pela <b>Corda Verde e Crua</b>,
+             devendo atender aos requisitos:</p>
+             <ul>
+                <li>
+                    À todos os requisitos da Primeira Graduação;
+                </li>
+                <li>
+                    Realizar os movimentos básicos da capoeira: <em>Ginga, Benção, Martelo, Queixada por dentro e Meia-lua de frente;</em>
+                </li>
+                <li>
+                    Noções de golpes giratórios: <em>Queixada, Armada e Meia-lua de compasso;</em>
+                </li>
+                <li>
+                    Noções de movimentações de chão: <em>Negativa para frente, Negativa de fuga e Pêndulo;</em>
+                </li>
+                <li>
+                    Habilidade razoável de esquivas;
+                </li>
+                <li>
+                    Apresentar responsabilidade e disciplina aos treinos.
+                </li>
+             </ul>
+        </div>
+      </div>
+
+      <div class="corda">
+        <div class="corda-img">
+            <img src="{% static 'img/cordas/03 Corda Amarela-Crua.jpg' %}" alt="corda amarela e crua">
+        </div>
+        <div class="info-corda">
+            <p>A <b>Terceira Graduação</b> corresponde ao terceiro nível de aluno iniciante, simbolizado pela <b>Corda Amarela e Crua</b>,
+            devendo atender aos requistos:</p>
+            <ul>
+                <li>
+                    À todos os requisitos da Segunda Graduação;
+                </li>
+                <li>
+                    Habilidade razoável de golpes giratórios: <em>Queixada, Armada e Meia-lua de compasso;</em>
+                </li>
+                <li>
+                    Noções de entradas;
+                </li>
+                <li>
+                    Apresentar responsabilidade e disciplina aos treinos.
+                </li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="corda">
+        <div class="corda-img">
+            <img src="{% static 'img/cordas/04 Corda Azul-Crua.jpg' %}" alt="corda azul e crua">
+        </div>
+        <div class="info-corda">
+            <p>A <b>Quarta Graduação</b> corresponde ao quarto nível de aluno iniciante, simbolizado pela <b>Corda Azul e Crua</b>,
+            devendo atender aos requisitos:</p>
+            <ul>
+                <li>
+                    À todos os requisitos da Terceira Graduação;
+                </li>
+                <li>
+                    Realizar golpes giratórios: <em>Queixada, Armada e Meia-lua de compasso;</em>
+                </li>
+                <li>
+                    Habilidade razoável de movimentos de chão: <em>Rolê, Negativa para frente, Negativa de fuga e Pêndulo;</em>
+                </li>
+                <li>
+                    Habilidade razoável de entradas;
+                </li>
+                <li>
+                    Noções da musicalidade da capoeira: <em>Instrumentos</em>;
+                </li>
+                <li>
+                    Apresentar responsabilidade e disciplina aos treinos.
+                </li>
+            </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="estagio" id="aluno-iniciante">
+      <div class="corda"></div>
+      <div class="corda"></div>
+      <div class="corda"></div>
+      <div class="corda"></div>
+      <div class="corda"></div>
+    </section>
+
+    <section class="estagio" id="aluno-iniciante">
+      <div class="corda"></div>
+      <div class="corda"></div>
+      <div class="corda"></div>
+      <div class="corda"></div>
+      <div class="corda"></div>
+      <div class="corda"></div>
+    </section>
+
+  </main>
+
+ <footer class="site-footer">
+    <section id="patrocinadores-secao">
+      
+      <div class="footer-social-wrapper">
+        <h2>Conecte-se conosco</h2>
+        <p style="margin-bottom: 24px;">@alemdaginga</p>
+        
+        <div class="footer-social-icons">
+          <a href="https://www.tiktok.com/@alemdaginga?_r=1&_t=ZS-991d1IFkJmf" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://facebook.com/alemdaginga" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/+5509193571306" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/alemdagingacapoeira?igsi=MXR1a3l2a2ZmcWxrcg%3D%3D" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@alemdaginga" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-tags">
+          <span>Capoeira</span>
+          <span>Esporte</span>
+          <span>Cultura</span>
+          <span>Além da Ginga</span>
+          <span>Social</span>
+        </div>
+      </div>
+
+      <!-- Coluna 2: Patrocinadores -->
+      <div class="footer-sponsors-wrapper">
+        <h2>Patrocinadores e Apoiadores</h2>
+        <div class="patrocinadores">
+          <img src="{% static 'img/patrocinador-1.jpeg' %}" alt="Patrocinador 1">
+          <img src="{% static 'img/patrocinador-2.jpeg' %}" alt="Patrocinador 2">
+          <img src="{% static 'img/patrocinador-3.jpeg' %}" alt="Patrocinador 3">
+          <img src="{% static 'img/patrocinador-4.jpeg' %}" alt="Patrocinador 4">
+          <img src="{% static 'img/patrocinador-5.png' %}" alt="Patrocinador 5">
+          <img src="{% static 'img/patrocinador-6.png' %}" alt="Patrocinador 6">
+          <img src="{% static 'img/patrocinador-7.png' %}" alt="Patrocinador 7">
+          <img src="{% static 'img/patrocinador-8.png' %}" alt="Patrocinador 8">
+          <img src="{% static 'img/patrocinador-9.png' %}" alt="Patrocinador 9">
+          <img src="{% static 'img/patrocinador-10.png' %}" alt="Patrocinador 10">
+          <img src="{% static 'img/patrocinador-11.png' %}" alt="Patrocinador 11">
+        </div>
+      </div>
+
+    </section>
+  </footer>
+</body>
+</html>
