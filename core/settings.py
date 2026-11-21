@@ -82,7 +82,7 @@ CACHES = {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
         'LOCATION': 'unique-snowflake',
         'OPTIONS': {
-            'MAX_ENTRIES': 300,  # Guarda no máximo 300 itens na RAM
+            'MAX_ENTRIES': 150,  # Guarda no máximo 150 itens na RAM
             'CULL_FREQUENCY': 3, # Apaga 1/3 dos itens antigos se atingir o limite
         }
     }
