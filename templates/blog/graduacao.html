@@ -17,7 +17,7 @@
   <header>
     <div class="logo">
       <img src={% static "img/logos/logo-ginga.png" %} alt="Logo Além da Ginga">
-      <h1>ALEM DA GINGA</h1>
+      <h1>ALÉM DA GINGA</h1>
     </div>
     <nav class="navbar">
       <ul>
@@ -41,17 +41,23 @@
       </p>
       <p id="observacao-sobre"><i>obs: O projeto tem como base o sistema de cordas do grupo de capoeira Dança e Luta. Desta forma, nossas cores e requisitos podem ser diferentes
         de outros grupos</i></p>
+        <nav>
+          <a href="#aluno-iniciante" id="inic"><i class="fa-solid fa-play"></i> Iniciante</a>
+          <a href="#aluno-graduado" id="grad"><i class="fa-solid fa-play"></i> Graduado</a>
+          <a href="#professor" id="prof"><i class="fa-solid fa-play"></i> Professor</a>
+        </nav>
     </section>
     
     <section class="estagio" id="aluno-iniciante">
+      <div class="tag"><h2>Aluno Iniciante</h2></div>
+
       <p>O primeiro estágio corresponde ao de <strong>Aluno Iniciante</strong>, simbolizado pelo uso da cor crua (branca) na corda.</p>
       <div class="corda">
         <div class="corda-img">
             <img src={% static 'img/cordas/01 Corda Crua.jpg' %} alt="corda crua">  
         </div>
         <div class="info-corda">
-            <p>A <b>Primeira Graduação</b> corresponde ao primeiro nível de aluno iniciante, simbolizado pela <b>Corda Crua</b>
-            , devendo atender aos requisitos:</p>
+            <p>A <b>Primeira Graduação</b> corresponde ao primeiro nível de aluno iniciante, simbolizado pela <b>Corda Crua</b>, devendo atender aos requisitos:</p>
             <ul>
                 <li>
                     Noções dos movimentos básicos da capoeira: <em>Ginga, Benção, Martelo, Queixada por dentro e 
@@ -159,6 +165,7 @@
     </section>
 
     <section class="estagio" id="aluno-graduado">
+      <div class="tag"><h2>Aluno Graduado</h2></div>
       <p>O segundo estágio corresponde ao de <strong>Aluno Graduado</strong>, simbolizado pelo uso completo de cores na corda e seguindo a evolução
       crescente Verde - Amarela - Azul.</p>
       <div class="corda">
@@ -281,12 +288,97 @@
     </section>
 
     <section class="estagio" id="professor">
-      <div class="corda"></div>
-      <div class="corda"></div>
-      <div class="corda"></div>
-      <div class="corda"></div>
-      <div class="corda"></div>
-      <div class="corda"></div>
+      <div class="tag"><h2>Professor</h2></div>
+      <p>O terceiro estágio corresponde ao <strong>Professor de Capoeira</strong>, simbolizado pelo uso completo de cores na borda e seguindo a evolução crescente Verde - Amarela - Azul - Vermelha.
+       Neste estágio o capoeirista já está apto a dar aulas de capoeira. Os períodos apresentados abaixo em que o praticante deve cumprir em cada respectiva graduação podem ser alterados pelo Conselho de Mestres e Professores.</p>
+      <div class="corda">
+        <div class="corda-img">
+          <img src="{% static 'img/cordas/10 Corda Azul.jpg'%}" alt="corda azul">
+        </div>
+        <div class="info-corda">
+          <p>A <b>Décima Graduação</b> corresponde ao status de <b>Instrutor</b>, simbolizado pela <b>Corda Azul</b>, devendo atender aos requisitos:</p>
+          <ul>
+            <li>À todos os requisitos da Nona Graduação;</li>
+            <li>Aperfeiçoado a habilidade de realizar movimentações de floreio e outros movimentos acrobáticos;</li>
+            <li>Conhecimento da musicalidade básica da capoeira: tocar todos os instrumentos musicais da capoeira;</li>
+            <li>Possuir conhecimento didático;</li>
+            <li>Apresentar responsabilidade e disciplina em qualquer ocasião relacionada à capoeira e ao <b>GRUPO DANÇA E LUTA</b>;</li>
+            <li>Cumprir tempo mínimo de 2 (dois) anos na nona graduação;</li>
+            <li>Avaliação do Conselho de Mestres e Professores do grupo.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="corda">
+        <div class="corda-img">
+          <img src="{% static 'img/cordas/11 Corda Vermelha-Verde.jpg' %}" alt="corda vermelha verde">
+        </div>
+        <div class="info-corda">
+          <p>A <b>Décima Primeira Graduação</b> corresponde ao status de <b>Professor</b>, simbolizado pela <b>Corda Verde e Vermelha</b>, devendo atender aos requisitos:</p>
+          <ul>
+            <li>À todos os requisitos da Décima Graduação;</li>
+            <li>Apresentar responsabilidade e disciplina aos treinos;</li>
+            <li>Ministrar aulas, oficinas e cursos relacionados ao conhecimento da capoeira;</li>
+            <li>Apresentar responsabilidade e disciplina em qualquer ocasião relacionada à capoeira e ao <b>GRUPO DANÇA E LUTA</b>;</li>
+            <li>Cumprir tempo mínimo de 3 (três) anos na décima graduação.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="corda">
+        <div class="corda-img">
+          <img src="{% static 'img/cordas/12 Corda Vermelha-Amarela.jpg'%}" alt="corda vermelha amarela">
+        </div>
+        <div class="info-corda">
+          <p>A <b>Décima Segunda Graduação</b> corresponde ao status de <b>Contra-Mestre</b> ou <b>Mestrando</b>, simbolizado pela <b>Corda Vermelha e Amarela</b>, devendo atender aos requisitos:</p>
+          <ul>
+            <li>À todos os requisitos da Décima Graduação;</li>
+            <li>Apresentar responsabilidade e disciplina em qualquer ocasião relacionada à capoeira e ao <b>GRUPO DANÇA E LUTA</b>;</li>
+            <li>Cumprir tempo mínimo de 5 (cinco) anos na décima primeira graduação;</li>
+            <li>Ser responsável por pólo de treinamento.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="corda">
+        <div class="corda-img">
+          <img src="{% static 'img/cordas/13 Corda Vermelha-Azul.jpg' %}" alt="corda vermelha azul">
+        </div>
+        <div class="info-corda">
+          <p>A <b>Décima Terceira Graduação</b> corresponde ao status de <b>Mestre de 1° Grau</b>, simbolizado pela <b>Corda Vermelha e Azul</b>, devendo atender aos requisitos de:</p>
+          <ul>
+            <li>À todos os requisitos da Décima Graduação;</li>
+            <li>Apresentar responsabilidade e disciplina em qualquer ocasião relacionada à capoeira e ao <b>GRUPO DANÇA E LUTA</b>;</li>
+            <li>Cumprir tempo mínimo de 5 (cinco) anos na décima segunda graduação;</li>
+            <li>Ser responsável por pólo de treinamento com alunos já na fase de aluno graduado.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="corda">
+        <div class="corda-img">
+          <img src="{% static 'img/cordas/14 Corda Vermelha.jpg' %}" alt="corda vermelha">
+        </div>
+        <div class="info-corda">
+          <p>A <b>Décima Quarta Graduação</b> corresponde ao status de <b>Mestre de 2° Grau</b> ou <b>Mestríssimo</b>, simbolizado pela <b>Corda Vermelha</b>, devendo atender aos requisitos:</p>
+          <ul>
+            <li>À todos os requisitos da Décima Graduação;</li>
+            <li>Apresentar responsabilidade e disciplina em qualquer ocasião relacionada à capoeira e ao <b>GRUPO DANÇA E LUTA</b>;</li>
+            <li>Cumprir tempo mínimo de 5 (cinco) anos na décima terceira graduação;</li>
+            <li>Formar um aluno com status de Instrutor.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="corda">
+        <div class="corda-img">
+          <img src="{% static 'img/cordas/15 Corda Vermelha-Branca.jpg' %}" alt="corda vermelha branca">
+        </div>
+        <div class="info-corda">
+          <p>A <b>Décima Quinta Graduação</b> corresponde ao status de <b>Gran Mestre</b>, simbolizado pela <b>Corda Vermelha e Crua</b>, devendo atender aos requisitos:</p>
+          <ul>
+            <li>À todos os requisitos da Décima Graduação</li>
+            <li>Cumprir tempo mínimo de 10 (dez) anos na décima quarta graduação;</li>
+            <li>Formar um aluno com status de Mestre de 1° grau.</li>
+            <li>Possuir méritos em relação à difusão dos objetivos do <b>GRUPO DANÇA E LUTA e da Capoeira</b>.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
   </main>

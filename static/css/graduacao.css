@@ -17,6 +17,22 @@
   --color-brand: #16a34a; /* Verde principal */
   --color-brand-hover: #15803d;
   --color-footer-bg: #0f172a; /* Azul escuro do rodapé */
+
+  /* Vermelho / Coral (Pincelada superior da logo) */
+  --color-red-light: #fee2e2;
+  --color-red: #e05252;            /* Tom coral/vermelho da pincelada[cite: 2] */
+  --color-red-hover: #dc2626;
+
+  /* Azul (Pincelada esquerda da logo) */
+  --color-blue-light: #e0f2fe;
+  --color-blue: #3898ec;           /* Azul céu vibrante da logo[cite: 2] */
+  --color-blue-hover: #0284c7;
+
+  /* Amarelo (Pincelada direita da logo) */
+  --color-yellow-light: #fef9c3;
+  --color-yellow: #eab308;         /* Amarelo ajustado para leitura em tela */
+  --color-yellow-hover: #ca8a04;
+
   --max-width-content: 860px;
   --max-width-header: 860px;
   --font-sans: 'Inter', sans-serif;
@@ -43,6 +59,10 @@ body {
   line-height: 1.7;
   font-size: 1.125rem;
   -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* =========================================
@@ -118,6 +138,60 @@ section {
   margin-bottom: 60px;
 }
 
+.estagio {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-surface);
+  padding: 16px;
+  border-radius: 16px;
+  
+}
+
+#introducao nav a {
+  text-decoration: none;
+  margin-right: 10px;
+  color: var(--color-text-muted);
+  color: black;
+  font-weight: 500;
+  line-height: 1.4;
+  border-radius: 24px;
+  transition: color 0.2s ease;
+}
+
+#introducao a:hover {
+  color: var(--color-brand);
+}
+
+#introducao a i {
+  color: var(--color-brand);
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+#aluno-iniciante {
+  border-left: 2px solid var(--color-brand);
+}
+
+#aluno-iniciante .tag {
+  background-color: var(--color-brand-light);
+}
+
+#aluno-graduado {
+  border-left: 2px solid var(--color-blue);
+}
+
+#aluno-graduado .tag {
+  background-color: var(--color-blue-light);
+}
+
+#professor {
+ border-left: 2px solid var(--color-red);
+}
+
+#professor .tag{
+  background-color: var(--color-red-light);
+}
+
+
 .corda {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -134,7 +208,17 @@ section {
 
 .corda ul li {
     margin-bottom: 4px;
-    text-align: justify;
+}
+
+.tag {
+  border-radius: 24px;
+  width: max-content;
+  margin-bottom: 24px;
+  padding: 10px;
+}
+
+.tag h2 {
+  margin: 0;
 }
 
 /* =========================================
