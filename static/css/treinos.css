@@ -118,7 +118,109 @@ section {
   margin-bottom: 60px;
 }
 
-/* =========================================
+.local-card {
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0px 6px -1px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-surface);
+  margin-bottom: 30px;
+}
+
+.localizacao-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--color-brand-light);
+  margin-bottom: 20px;
+}
+
+.localizacao-row p {
+  text-align: left;
+}
+
+.localizacao-row a {
+  font-size: 0.8em;
+  padding: 10px;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  background-color: var(--color-brand-light);
+  color: var(--color-brand-hover);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+.localizacao-row a:hover {
+  color: #0f172a;
+  background-color: var(--color-brand-hover);
+}
+
+.informacao {
+  padding: 16px;
+  box-shadow: 0 0px 4px -1px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-bg);
+  border-radius: 16px;
+}
+
+.informacao p {
+  margin-bottom: 5px;
+}
+
+.dias-hora {
+  padding-left: 0;
+  border-bottom: 2px solid var(--color-brand-light);
+  margin-bottom: 10px;
+}
+
+.dias-hora li{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.dias-hora p {
+  text-align: left;
+}
+
+.dias {
+  display: flex;
+  gap: 5px;
+}
+
+.dias p {
+  background-color: var(--color-brand-light);
+  padding: 2px 10px 2px 10px;
+  height: min-content;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#horas {
+  display: flex;
+  gap: 10px;
+}
+
+.responsavel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.responsaveis {
+  display: flex;
+  gap: 15px;
+}
+
+.responsaveis p {
+  width: max-content;
+}
+
+.responsavel-text {
+  min-width: max-content;
+}
+
+/* ========================================
    Cabeçalho
    ========================================= */
 header {
@@ -203,7 +305,6 @@ header h1 {
 
 .patrocinadores img {
   background: #ffffff;
-  padding: 16px;
   border-radius: 12px;
   height: 96px;
   width: 100%;
@@ -269,6 +370,29 @@ header h1 {
   #patrocinadores-secao {
     grid-template-columns: 1fr; /* Rodapé empilhado no celular */
     gap: 32px;
+  }
+
+  .localizacao-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .responsaveis {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .responsavel {
+    gap: 5px;
+  }
+
+  #horas {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .dias {
+    flex-direction: column;
   }
 }
 

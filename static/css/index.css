@@ -195,7 +195,6 @@ Rodapé Padrão
 
 .patrocinadores img {
   background: #ffffff;
-  padding: 16px;
   border-radius: 12px;
   height: 96px;
   width: 100%;
@@ -267,7 +266,7 @@ Responsividade (Telas Menores)
 @media (max-width: 716px) {
 
   aside {
-    order: -1;
+    order: 1;
   }
 
   .popular-posts-list {
@@ -374,6 +373,7 @@ NOVO LAYOUT: DUAS COLUNAS (Estilo Blog/Artigos)
   letter-spacing: 0.08em;
   color: #64748b; 
   margin-bottom: 20px;
+  margin-top: 20px;
   font-weight: 700;
 }
 
