@@ -26,7 +26,7 @@ class Postagem(models.Model):
         if self.capa and 'res.cloudinary.com' in self.capa.url:
             return self.capa.url.replace(
                 '/upload/',
-                '/upload/f_auto,q_auto,w_800,c_limit/'
+                '/upload/f_auto,q_auto,w_800,h_800,c_limit/'
             )
         return self.capa.url if self.capa else ''
     
@@ -37,7 +37,7 @@ class Postagem(models.Model):
         # Otimiza todas as URLs do Cloudinary dentro do Markdown (antigas e novas)
         return self.conteudo.replace(
             'res.cloudinary.com/vcfrtlda/image/upload/',
-            'res.cloudinary.com/vcfrtlda/image/upload/f_auto,q_auto,w_800,c_limit/'
+            'res.cloudinary.com/vcfrtlda/image/upload/f_auto,q_auto,w_800,h_800,c_limit/'
         )
 
 
@@ -68,7 +68,7 @@ class Evento(models.Model):
         if self.capa and 'res.cloudinary.com' in self.capa.url:
             return self.capa.url.replace(
                 '/upload/',
-                '/upload/f_auto,q_auto,w_800,c_fill/'
+                '/upload/f_auto,q_auto,w_800,h_800,c_fill/'
             )
         return self.capa.url if self.capa else ''
 
@@ -89,6 +89,6 @@ class Integrante(models.Model):
         if self.foto and 'res.cloudinary.com' in self.foto.url:
             return self.foto.url.replace(
                 '/upload/',
-                '/upload/f_auto,q_auto,w_800,c_fill/'
+                '/upload/f_auto,q_auto,w_800,h_800,c_fill/'
             )
         return self.foto.url if self.foto else ''
