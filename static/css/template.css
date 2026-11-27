@@ -129,7 +129,7 @@ main {
 .conteudo img {
   max-width: 100%;
   display: block;
-  margin: 0 auto;
+  margin: 60px auto 60px auto;
 }
 
 section {
