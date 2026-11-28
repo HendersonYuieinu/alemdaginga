@@ -68,7 +68,7 @@ class Evento(models.Model):
         if self.capa and 'res.cloudinary.com' in self.capa.url:
             return self.capa.url.replace(
                 '/upload/',
-                '/upload/f_auto,q_auto,w_800,h_800,c_fill/'
+                '/upload/f_auto,q_auto,w_800,c_fill/'
             )
         return self.capa.url if self.capa else ''
 

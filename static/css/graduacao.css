@@ -263,15 +263,18 @@ header h1 {
 
 
 .navbar a {
+  padding-bottom: 10px;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
   color: #475569;
+  border-bottom: 3px solid #8492a6;
   transition: color 0.2s ease;
 }
 
 .navbar a:hover {
   color: var(--color-brand);
+  border-bottom: 3px solid var(--color-brand);
 }
 
 

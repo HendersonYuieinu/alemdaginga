@@ -171,6 +171,48 @@ header h1 {
   color: var(--color-brand);
 }
 
+.breadcrumb {
+  max-width: 1024px;
+  margin: 16px auto 0;
+  padding: 0 24px;
+}
+
+.breadcrumb ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding-left: 0;
+  font-size: 0.9rem;
+}
+
+.breadcrumb li {
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li + li::before {
+  content: ">";
+  margin-right: 8px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.breadcrumb a {
+  color: #475569;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-brand);
+  text-decoration: underline;
+}
+
 
 /* =========================================
    Rodapé Padrão
@@ -311,3 +353,4 @@ Responsividade (Telas Menores)
     gap: 16px;
   }
 }
+

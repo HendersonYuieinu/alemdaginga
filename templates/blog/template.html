@@ -40,7 +40,13 @@
       </ul>
     </nav>
   </header>
-  
+
+  <nav class="breadcrumb" aria-label="Navegação estrutural">
+    <ul>
+      <li><a href="{% url 'blog:home' %}">Blog</a></li>
+      <li aria-current="page">{{ post.titulo }}</li>
+    </ul>
+  </nav>
   <!-- ================= CONTEÚDO PRINCIPAL ================= -->
   <!-- Toda a parte específica da página deve ficar dentro da tag <main> -->
   <main>

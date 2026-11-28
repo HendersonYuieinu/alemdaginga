@@ -39,6 +39,7 @@
         <li><a href="{% url 'blog:sobre' %}">Sobre</a></li>
       </ul>
     </nav>
+    
   </header>
   
   <main class="blog-layout">
@@ -50,6 +51,7 @@
         {% if post.capa %}
         <img src="{{ post.capa_otimizada }}" alt="">
         {% endif %}
+        <time class="card-date">{{ post.data_criacao|date:"d \d\e F \d\e Y" }}</time>
         <h2>{{ post.titulo }}</h2>
         <p class="post-excerpt">{{post.resumo}}</p>
         <a href="{% url 'blog:post_completo' post.slug %}" class="read-more"></a>

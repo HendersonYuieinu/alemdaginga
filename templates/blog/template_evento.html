@@ -42,6 +42,12 @@
         </ul>
         </nav>
     </header>
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+        <ul>
+            <li><a href="{% url 'blog:eventos' %}">Eventos</a></li>
+            <li aria-current="page">{{ evento.titulo }}</li>
+        </ul>
+    </nav>
 
     <main class="detalhes-layout">
         <div class="conteudo-column">

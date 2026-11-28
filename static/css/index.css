@@ -150,15 +150,18 @@ header h1 {
 
 
 .navbar a {
+  padding-bottom: 10px;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
   color: #475569;
+  border-bottom: 3px solid #8492a6;
   transition: color 0.2s ease;
 }
 
 .navbar a:hover {
   color: var(--color-brand);
+  border-bottom: 3px solid var(--color-brand);
 }
 
 /* =========================================
@@ -361,6 +364,17 @@ NOVO LAYOUT: DUAS COLUNAS (Estilo Blog/Artigos)
   z-index: 1;
 }
 
+.card-date {
+  padding-left: 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+  margin-bottom: 0.45rem;
+}
+
+
 /* --- Coluna Lateral (Sidebar) --- */
 
 .sidebar-widget {
@@ -416,3 +430,4 @@ NOVO LAYOUT: DUAS COLUNAS (Estilo Blog/Artigos)
   }
   
 }
+
